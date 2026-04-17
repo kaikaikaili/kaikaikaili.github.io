@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介 - 李凯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-home {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .bio-text {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .bio-text b {
+            color: var(--primary-color);
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .edu-item p {
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .skill-bar-container {
+            margin-bottom: 20px;
+        }
+        
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+        
+        .interests-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .interests-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .interests-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: var(--secondary-color);
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
+        
+        <div class="section">
+            <h2 class="section-title">个人简介</h2>
+            <p class="bio-text">
+                我是 <b>李凯 (Likai)</b>，目前是南京大学大气科学学院“拔尖计划”本科生。我的研究领域位于 <b>大气科学</b>、<b>雷达气象学</b> 与 <b>深度学习</b> 的交汇点。我热衷于利用先进的人工智能算法，解析复杂的云物理过程及降水垂直结构，特别是在极端天气系统（如台风）中的应用。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">教育背景</h2>
+            <div class="edu-item">
+                <div class="date">2022 - 至今</div>
+                <p><b>南京大学 (NJU)</b><br>大气科学（拔尖计划）· 本科</p>
+            </div>
+            <div class="edu-item">
+                <div class="date">2026 - 预计</div>
+                <p><b>南京大学 (NJU)</b><br>雷达气象/云微物理 · 博士（直博项目）</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">技能矩阵</h2>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>PYTHON / PYTORCH (深度学习)</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>雷达数据分析</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>大气动力学</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">兴趣爱好</h2>
+            <ul class="interests-list">
+                <li><i class="fas fa-running"></i> 长距离跑步 (业余半马选手在役)</li>
+                <li><i class="fas fa-book"></i> 阅读科技文献</li>
+                <li><i class="fas fa-laptop-code"></i> 编程与算法设计</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

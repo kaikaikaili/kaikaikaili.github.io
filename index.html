@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李凯 | 南京大学大气科学</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Header Area */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .title {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Achievement Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 5px;
+        }
+
+        /* Research Section */
+        .research-panel {
+            background: white;
+            border-left: 4px solid var(--secondary-color);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .research-panel h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .research-panel p {
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .research-panel strong {
+            color: var(--primary-color);
+        }
+
+        /* Nav Grid */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .nav-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-item:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+
+        .nav-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .nav-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            color: var(--text-gray);
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--text-gray);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .stats-grid, .nav-grid { grid-template-columns: 1fr; }
+            .name { font-size: 2rem; }
+            .container { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="avatar-container">
+                <img src="/fig/The-Ridge-Tom-Rae.jpg" alt="李凯" class="avatar">
+            </div>
+            <h1 class="name">李凯 (Likai)</h1>
+            <p class="title">南京大学 / 大气科学拔尖计划</p>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">核心GPA</span>
+                <span class="stat-value">4.42/5.0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">培养模式</span>
+                <span class="stat-value">准直博</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">个人爱好</span>
+                <span class="stat-value">长跑</span>
+            </div>
+        </section>
+
+        <section class="research-panel">
+            <h3>研究项目：青年学生基础研究项目</h3>
+            <p>
+                <strong>目标课题：</strong> 深度学习驱动的星载双频雷达台风降水垂直速度定量反演研究 <br>
+                <strong>核心技术：</strong> Deep Learning, Satellite Radar, Cloud Microphysics
+            </p>
+        </section>
+
+        <nav class="nav-grid">
+            <a href="./about/" class="nav-item">
+                <h4>个人简介</h4>
+                <p>个人经历与多维兴趣</p>
+            </a>
+            <a href="./cv/Likai_CV_2025.pdf" class="nav-item">
+                <h4>简历档案</h4>
+                <p>简历与教育背景数据</p>
+            </a>
+            <a href="./publications/" class="nav-item">
+                <h4>学术成果</h4>
+                <p>论文与学术成果输出</p>
+            </a>
+            <a href="./blog/" class="nav-item">
+                <h4>学术日志</h4>
+                <p>技术分享与学术日志</p>
+            </a>
+        </nav>
+
+        <footer>
+            <div class="social-icons">
+                <a href="https://x.com/lkk128143"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/kaikaikaili"><i class="fab fa-github"></i></a>
+                <a href="mailto:221200031@smail.nju.edu.cn"><i class="fas fa-envelope"></i></a>
+                <a href="https://orcid.org/0009-0007-5309-3924"><i class="fab fa-orcid"></i></a>
+            </div>
+            <p>© 2025 李凯 | 大气科学</p>
+        </footer>
+    </div>
+
+</body>
+</html>

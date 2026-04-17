@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究项目 - 李凯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-home {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            display: block;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .research-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .research-item:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .research-item h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .research-item p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .research-item strong {
+            color: var(--primary-color);
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            font-size: 0.8rem;
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--secondary-color);
+            padding: 4px 12px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: var(--primary-color);
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .research-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
+        
+        <div class="header">
+            <h1>研究项目</h1>
+        </div>
+
+        <!-- 主要研究项目 -->
+        <div class="research-item">
+            <h3>深度学习驱动的星载双频雷达台风降水垂直速度定量反演研究</h3>
+            <p>
+                本项目旨在利用深度学习技术，基于GPM-DPR双频雷达数据，实现台风环境下降水垂直速度的定量反演。通过构建U-Net架构的深度学习模型，融合雷达反射率、偏振信息和云微物理参数，解决传统方法在极端天气条件下的局限性。
+            </p>
+            <p>
+                <strong>研究目标：</strong> 开发高精度的垂直速度反演算法，为台风强度预测和降水机制研究提供关键数据支持。
+            </p>
+            <div class="tech-tags">
+                <span class="tech-tag">深度学习</span>
+                <span class="tech-tag">卫星雷达</span>
+                <span class="tech-tag">云微物理</span>
+                <span class="tech-tag">台风研究</span>
+            </div>
+            <a href="./projs.pdf" class="project-link"><i class="fas fa-file-pdf"></i> 项目详情</a>
+        </div>
+
+        <!-- 其他研究方向 -->
+        <div class="research-item">
+            <h3>雷达反射率校正的机器学习方法</h3>
+            <p>
+                针对雷达观测中的各种误差源，开发基于机器学习的雷达反射率校正算法，提高雷达数据的准确性和可靠性。
+            </p>
+            <div class="tech-tags">
+                <span class="tech-tag">机器学习</span>
+                <span class="tech-tag">雷达气象</span>
+                <span class="tech-tag">数据校正</span>
+            </div>
+        </div>
+
+        <div class="research-item">
+            <h3>极端天气事件的卫星遥感监测</h3>
+            <p>
+                利用多源卫星数据，结合深度学习技术，实现对极端天气事件（如台风、暴雨）的实时监测和预警。
+            </p>
+            <div class="tech-tags">
+                <span class="tech-tag">卫星遥感</span>
+                <span class="tech-tag">极端天气</span>
+                <span class="tech-tag">实时监测</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

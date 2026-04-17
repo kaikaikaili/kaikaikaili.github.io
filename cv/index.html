@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历 - 李凯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-home {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            display: block;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .profile-section {
+            display: flex;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            flex: 0 0 200px;
+            margin-right: 30px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-info h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .profile-info h3 {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            color: var(--text-gray);
+        }
+        
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .cv-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .cv-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .cv-link:hover {
+            background: var(--primary-color);
+        }
+        
+        .section {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-date {
+            flex: 0 0 150px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-content p {
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                flex: 0 0 auto;
+            }
+            
+            .profile-image img {
+                width: 150px;
+                margin: 0 auto;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-date {
+                flex: 0 0 auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
+        
+        <div class="header">
+            <h1>简历</h1>
+        </div>
+
+        <!-- 个人资料部分 -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="/fig/lk.jpg" alt="李凯">
+            </div>
+            <div class="profile-info">
+                <h2>李凯 (Li Kai)</h2>
+                <h3>南京大学大气科学学院本科生</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-university"></i> 南京大学大气科学学院</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:221200031@smail.nju.edu.cn">221200031@smail.nju.edu.cn</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:likai221200031@qq.com">likai221200031@qq.com</a></p>
+                </div>
+                <div class="cv-links">
+                    <a href="./Likai_CV_2025.pdf" class="cv-link" target="_blank"><i class="fas fa-file-pdf"></i> 完整简历</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 教育背景 -->
+        <div class="section">
+            <h2>教育背景</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2016.9 - 2022.6</div>
+                <div class="timeline-content">
+                    <h3>木渎高级中学</h3>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2022.9 - 至今</div>
+                <div class="timeline-content">
+                    <h3>南京大学</h3>
+                    <p>大气科学（拔尖计划）· 本科</p>
+                    <p>导师: <a href="https://as.nju.edu.cn/a2/cb/c11341a303819/page.htm">Huang, H.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 研究项目 -->
+        <div class="section">
+            <h2>研究项目</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2023.12 - 2025.12</div>
+                <div class="timeline-content">
+                    <h3>基于深度学习的双偏振雷达冰雹和短临预报研究</h3>
+                    <p>主要研究者 | 指导老师: Huang, H.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023.12 - 2025.12</div>
+                <div class="timeline-content">
+                    <h3>基于深度学习的对环境因子影响雷暴形成的分析研究</h3>
+                    <p>主要研究者 | 指导老师: <a href="https://as.nju.edu.cn/6e/7c/c11339a421500/page.htm">Wang, S.</a></p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024.8.3 - 2024.8.12</div>
+                <div class="timeline-content">
+                    <h3>中芬赫尔辛基大气与地球系统国际科考与科研训练项目</h3>
+                    <p>成员 | 已完成 | 指导老师: <a href="https://as.nju.edu.cn/29/3f/c11339a534847/page.htm">Nie, W.</a> & <a href="https://nh.nju.edu.cn/info/1051/5091.htm">Yan, C.</a></p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024.5 - 2024.11</div>
+                <div class="timeline-content">
+                    <h3>挑战杯"揭榜挂帅"专项赛·毫米波云雷达非气象目标智能识别技术研究</h3>
+                    <p>成员 | 已完成 | 一等奖 | 指导老师: <a href="https://as.nju.edu.cn/29/3f/c11339a534847/page.htm">Yuan, H.</a> & Huang, H.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024.12 - 2025.12</div>
+                <div class="timeline-content">
+                    <h3>机器学习模型在台风预报中的误差增长研究</h3>
+                    <p>成员 | 进行中 | 指导老师: <a href="https://as.nju.edu.cn/54/52/c11339a218194/page.htm">Lei, L.</a> & <a href="https://as.nju.edu.cn/54/60/c11341a218208/page.htm">Zhang, Y.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 获奖情况 -->
+        <div class="section">
+            <h2>获奖情况</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2023.10</div>
+                <div class="timeline-content">
+                    <h3>南京大学本科生基础学科专项奖学金·优秀奖</h3>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023.10</div>
+                <div class="timeline-content">
+                    <h3>浦蓝大气奖学金 (院级)</h3>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024.12</div>
+                <div class="timeline-content">
+                    <h3>人民奖学金·二等奖</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>最后更新: 2025年1月</p>
+        </div>
+    </div>
+</body>
+</html>
