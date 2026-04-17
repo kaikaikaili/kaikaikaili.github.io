@@ -40,21 +40,6 @@
             margin-bottom: 60px;
         }
 
-        .avatar-container {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 3px solid var(--secondary-color);
-            object-fit: cover;
-        }
-
         .name {
             font-size: 2.5rem;
             font-weight: 600;
@@ -203,9 +188,6 @@
 
     <div class="container">
         <header class="header">
-            <div class="avatar-container">
-                <img src="/fig/The-Ridge-Tom-Rae.jpg" alt="李凯" class="avatar">
-            </div>
             <h1 class="name">李凯 (Likai)</h1>
             <p class="title">南京大学 / 大气科学拔尖计划</p>
         </header>
@@ -260,8 +242,16 @@
                 <a href="https://orcid.org/0009-0007-5309-3924"><i class="fab fa-orcid"></i></a>
             </div>
             <p>© 2025 李凯 | 大气科学</p>
+            <p id="busuanzi_container_site_uv" style="margin-top: 10px;">
+                访客量：<span id="busuanzi_value_site_uv"></span>
+            </p>
+            <p id="busuanzi_container_site_pv" style="margin-top: 5px;">
+                浏览量：<span id="busuanzi_value_site_pv"></span>
+            </p>
         </footer>
     </div>
+
+    <script async src="//busuanzi.icodeju.com/cdn/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
