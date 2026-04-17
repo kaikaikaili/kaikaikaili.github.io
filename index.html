@@ -242,16 +242,34 @@
                 <a href="https://orcid.org/0009-0007-5309-3924"><i class="fab fa-orcid"></i></a>
             </div>
             <p>© 2025 李凯 | 大气科学</p>
-            <p id="busuanzi_container_site_uv" style="margin-top: 10px;">
-                访客量：<span id="busuanzi_value_site_uv"></span>
-            </p>
-            <p id="busuanzi_container_site_pv" style="margin-top: 5px;">
-                浏览量：<span id="busuanzi_value_site_pv"></span>
+            <p id="visitor-count" style="margin-top: 10px; color: var(--text-gray);">
+                访客量：<span id="uv-count">0</span> | 浏览量：<span id="pv-count">0</span>
             </p>
         </footer>
     </div>
 
-    <script src="https://cdn.bootcdn.net/ajax/libs/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+        (function() {
+            var uvKey = 'site_uv';
+            var pvKey = 'site_pv';
+
+            var uv = parseInt(localStorage.getItem(uvKey)) || 0;
+            var pv = parseInt(localStorage.getItem(pvKey)) || 0;
+
+            pv++;
+            if (!localStorage.getItem(uvKey + '_date') || 
+                new Date().toDateString() !== new Date(localStorage.getItem(uvKey + '_date')).toDateString()) {
+                uv++;
+                localStorage.setItem(uvKey + '_date', new Date().toISOString());
+            }
+
+            localStorage.setItem(uvKey, uv);
+            localStorage.setItem(pvKey, pv);
+
+            document.getElementById('uv-count').textContent = uv;
+            document.getElementById('pv-count').textContent = pv;
+        })();
+    </script>
 
 </body>
 </html>
