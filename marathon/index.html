@@ -154,15 +154,39 @@
             padding: 25px;
             display: none;
             animation: fadeIn 0.3s ease;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
         }
         
         .race-card.active .race-content {
-            display: block;
+            display: flex;
         }
         
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .race-image-container {
+            flex-shrink: 0;
+            width: 200px;
+            height: auto;
+        }
+        
+        .race-image {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #f5f5f5;
+            display: block;
+        }
+        
+        .race-details {
+            flex: 1;
+            min-width: 0;
         }
         
         .race-meta {
@@ -182,17 +206,6 @@
         .meta-item i {
             margin-right: 8px;
             color: var(--secondary-color);
-        }
-        
-        .race-image {
-            width: 100%;
-            height: auto;
-            max-height: 350px;
-            object-fit: contain;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            background: #f5f5f5;
-            display: block;
         }
         
         .race-note {
@@ -242,6 +255,24 @@
             .race-type {
                 margin-right: 10px;
             }
+            
+            .race-content {
+                flex-direction: column;
+            }
+            
+            .race-image-container {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .race-image {
+                max-height: 250px;
+            }
+            
+            .race-details {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -281,15 +312,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/26仙马.jpg" alt="南京仙林半程马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:52:18</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/26仙马.jpg" alt="南京仙林半程马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>这是我今年的首场比赛，在家门口跑感觉特别亲切。赛道风景很美，从仙林大学城跑过，感受到了青春的气息。虽然成绩不算特别理想，但完赛就是胜利！继续加油！</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:52:18</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>这是我今年的首场比赛，在家门口跑感觉特别亲切。赛道风景很美，从仙林大学城跑过，感受到了青春的气息。虽然成绩不算特别理想，但完赛就是胜利！继续加油！</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -303,15 +338,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/26宁海.jpg" alt="宁海马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 4:15:23</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/26宁海.jpg" alt="宁海马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>人生第一个全程马拉松！赛道难度不小，后半程有些吃力，但坚持下来了。宁海的赛道风景非常美，跑过了很多古村落，感受到了浓浓的乡土气息。这次经历让我对马拉松有了更深的理解。</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 4:15:23</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>人生第一个全程马拉松！赛道难度不小，后半程有些吃力，但坚持下来了。宁海的赛道风景非常美，跑过了很多古村落，感受到了浓浓的乡土气息。这次经历让我对马拉松有了更深的理解。</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -325,15 +364,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/26汉马.jpg" alt="武汉马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 武汉</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:48:32</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 个人最佳</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/26汉马.jpg" alt="武汉马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>终于突破了1小时50分！汉马的赛道非常平坦，观众也很热情，给了我很大的动力。跑到长江大桥的时候，那种感觉真的很棒。这次比赛让我看到了自己的进步空间。</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 武汉</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:48:32</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 个人最佳</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>终于突破了1小时50分！汉马的赛道非常平坦，观众也很热情，给了我很大的动力。跑到长江大桥的时候，那种感觉真的很棒。这次比赛让我看到了自己的进步空间。</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -347,15 +390,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/25江阴.jpg" alt="江阴半程马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 江阴</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:55:47</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/25江阴.jpg" alt="江阴半程马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>秋季的比赛天气很舒服，赛道沿着长江边，风景宜人。这是我第一次参加江阴的比赛，组织得非常好，补给也很充足。</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 江阴</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:55:47</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>秋季的比赛天气很舒服，赛道沿着长江边，风景宜人。这是我第一次参加江阴的比赛，组织得非常好，补给也很充足。</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -369,15 +416,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/25江宁.jpg" alt="江宁大学城半程马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:53:21</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/25江宁.jpg" alt="江宁大学城半程马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>家门口的比赛，和同学们一起参加的，氛围特别好。赛道穿过各个大学，青春洋溢。虽然天气有点热，但跑得很开心！</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:53:21</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>家门口的比赛，和同学们一起参加的，氛围特别好。赛道穿过各个大学，青春洋溢。虽然天气有点热，但跑得很开心！</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -391,15 +442,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/25千岛湖.jpg" alt="千岛湖马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:51:08</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/25千岛湖.jpg" alt="千岛湖马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>最美赛道名不虚传！环湖跑的感觉太棒了，空气清新，风景如画。这是我跑得最轻松的一次半马，心情特别舒畅。</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:51:08</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>最美赛道名不虚传！环湖跑的感觉太棒了，空气清新，风景如画。这是我跑得最轻松的一次半马，心情特别舒畅。</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -413,15 +468,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/25临安.jpg" alt="临安半程马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 1:54:36</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/25临安.jpg" alt="临安半程马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>临安的赛道有一些爬坡，对我来说是个挑战。但沿途的竹海风景非常漂亮，跑起来很有感觉。</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 1:54:36</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>临安的赛道有一些爬坡，对我来说是个挑战。但沿途的竹海风景非常漂亮，跑起来很有感觉。</p>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -435,15 +494,19 @@
                     <i class="fas fa-chevron-down race-toggle"></i>
                 </div>
                 <div class="race-content">
-                    <img src="../fig/marathon/24泰州.jpg" alt="泰州半程马拉松" class="race-image">
-                    <div class="race-meta">
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 泰州</span>
-                        <span class="meta-item"><i class="fas fa-clock"></i> 2:01:45</span>
-                        <span class="meta-item"><i class="fas fa-trophy"></i> 首马完赛</span>
+                    <div class="race-image-container">
+                        <img src="../fig/marathon/24泰州.jpg" alt="泰州半程马拉松" class="race-image">
                     </div>
-                    <div class="race-note">
-                        <h4>参赛感想</h4>
-                        <p>这是我的第一个半程马拉松！赛前紧张了好久，没想到顺利完赛了。虽然成绩一般，但对我来说是一个巨大的突破。从此爱上了马拉松！</p>
+                    <div class="race-details">
+                        <div class="race-meta">
+                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 泰州</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 2:01:45</span>
+                            <span class="meta-item"><i class="fas fa-trophy"></i> 首马完赛</span>
+                        </div>
+                        <div class="race-note">
+                            <h4>参赛感想</h4>
+                            <p>这是我的第一个半程马拉松！赛前紧张了好久，没想到顺利完赛了。虽然成绩一般，但对我来说是一个巨大的突破。从此爱上了马拉松！</p>
+                        </div>
                     </div>
                 </div>
             </article>
