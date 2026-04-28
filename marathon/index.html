@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马拉松记录 - 李凯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-home {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            display: block;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 5px;
+        }
+        
+        .race-list {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .race-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .race-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .race-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px 25px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+        
+        .race-date {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+        
+        .race-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex: 1;
+        }
+        
+        .race-type {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .race-content {
+            padding: 25px;
+        }
+        
+        .race-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .meta-item i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+        
+        .race-image {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .race-note {
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .race-note p {
+            margin: 0;
+        }
+        
+        .race-note h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .empty-note {
+            color: var(--text-gray);
+            font-style: italic;
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .race-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .race-name {
+                flex: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
+        
+        <header class="header">
+            <h1><i class="fas fa-running"></i> 马拉松记录</h1>
+            <p>每一步都是对自我的挑战，每一场比赛都是一次成长</p>
+        </header>
+
+        <!-- 统计数据 -->
+        <section class="stats-row">
+            <div class="stat-card">
+                <span class="stat-value">8</span>
+                <span class="stat-label">参赛场次</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">168</span>
+                <span class="stat-label">累计里程 (km)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">1:48:32</span>
+                <span class="stat-label">半马最佳</span>
+            </div>
+        </section>
+
+        <!-- 比赛列表 -->
+        <section class="race-list">
+            <!-- 2026 南京仙林半程马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2026.04.28</span>
+                    <span class="race-name">南京仙林半程马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/26仙马.jpg" alt="南京仙林半程马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:52:18</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>这是我今年的首场比赛，在家门口跑感觉特别亲切。赛道风景很美，从仙林大学城跑过，感受到了青春的气息。虽然成绩不算特别理想，但完赛就是胜利！继续加油！</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2026 宁海马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2026.04.14</span>
+                    <span class="race-name">宁海马拉松</span>
+                    <span class="race-type">全程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/26宁海.jpg" alt="宁海马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 4:15:23</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>人生第一个全程马拉松！赛道难度不小，后半程有些吃力，但坚持下来了。宁海的赛道风景非常美，跑过了很多古村落，感受到了浓浓的乡土气息。这次经历让我对马拉松有了更深的理解。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2026 武汉马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2026.03.23</span>
+                    <span class="race-name">武汉马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/26汉马.jpg" alt="武汉马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 武汉</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:48:32</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 个人最佳</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>终于突破了1小时50分！汉马的赛道非常平坦，观众也很热情，给了我很大的动力。跑到长江大桥的时候，那种感觉真的很棒。这次比赛让我看到了自己的进步空间。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2025 江阴半程马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2025.11.16</span>
+                    <span class="race-name">江阴半程马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/25江阴.jpg" alt="江阴半程马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 江阴</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:55:47</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>秋季的比赛天气很舒服，赛道沿着长江边，风景宜人。这是我第一次参加江阴的比赛，组织得非常好，补给也很充足。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2025 江宁大学城半程马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2025.10.26</span>
+                    <span class="race-name">江宁大学城半程马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/25江宁.jpg" alt="江宁大学城半程马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:53:21</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>家门口的比赛，和同学们一起参加的，氛围特别好。赛道穿过各个大学，青春洋溢。虽然天气有点热，但跑得很开心！</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2025 千岛湖马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2025.10.19</span>
+                    <span class="race-name">千岛湖马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/25千岛湖.jpg" alt="千岛湖马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:51:08</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>最美赛道名不虚传！环湖跑的感觉太棒了，空气清新，风景如画。这是我跑得最轻松的一次半马，心情特别舒畅。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2025 临安半程马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2025.04.20</span>
+                    <span class="race-name">临安半程马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/25临安.jpg" alt="临安半程马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 1:54:36</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>临安的赛道有一些爬坡，对我来说是个挑战。但沿途的竹海风景非常漂亮，跑起来很有感觉。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2024 泰州半程马拉松 -->
+            <article class="race-card">
+                <div class="race-header">
+                    <span class="race-date">2024.11.17</span>
+                    <span class="race-name">泰州半程马拉松</span>
+                    <span class="race-type">半程马拉松</span>
+                </div>
+                <div class="race-content">
+                    <img src="../fig/marathon/24泰州.jpg" alt="泰州半程马拉松" class="race-image">
+                    <div class="race-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 泰州</span>
+                        <span class="meta-item"><i class="fas fa-clock"></i> 2:01:45</span>
+                        <span class="meta-item"><i class="fas fa-trophy"></i> 首马完赛</span>
+                    </div>
+                    <div class="race-note">
+                        <h4>参赛感想</h4>
+                        <p>这是我的第一个半程马拉松！赛前紧张了好久，没想到顺利完赛了。虽然成绩一般，但对我来说是一个巨大的突破。从此爱上了马拉松！</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
