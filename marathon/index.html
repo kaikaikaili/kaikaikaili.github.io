@@ -207,6 +207,30 @@
             color: var(--secondary-color);
         }
         
+        .race-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .race-status.completed {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .race-status.personal-best {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        
+        .race-status.first-race {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        
         .race-note {
             color: var(--text-dark);
             line-height: 1.7;
@@ -303,7 +327,7 @@
         <!-- 比赛列表 -->
         <section class="race-list">
             <!-- 2026 南京仙林半程马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:27:33" data-date="2026-04-12">
                 <div class="race-header">
                     <span class="race-date">2026.04.12</span>
                     <span class="race-name">南京仙林半程马拉松</span>
@@ -318,7 +342,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:27:33</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -329,7 +353,7 @@
             </article>
 
             <!-- 2026 武汉马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:47:59" data-date="2026-03-22">
                 <div class="race-header">
                     <span class="race-date">2026.03.22</span>
                     <span class="race-name">武汉马拉松</span>
@@ -344,7 +368,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 武汉</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:47:59</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 个人最佳</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -355,7 +379,7 @@
             </article>
 
             <!-- 2026 宁海马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:30:22" data-date="2026-03-08">
                 <div class="race-header">
                     <span class="race-date">2026.03.08</span>
                     <span class="race-name">宁海马拉松</span>
@@ -370,7 +394,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:30:22</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -381,7 +405,7 @@
             </article>
 
             <!-- 2025 千岛湖马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:35:52" data-date="2025-11-30">
                 <div class="race-header">
                     <span class="race-date">2025.11.30</span>
                     <span class="race-name">千岛湖马拉松</span>
@@ -396,7 +420,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:35:52</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -407,7 +431,7 @@
             </article>
 
             <!-- 2025 临安半程马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:54:02" data-date="2025-10-19">
                 <div class="race-header">
                     <span class="race-date">2025.10.19</span>
                     <span class="race-name">临安半程马拉松</span>
@@ -422,7 +446,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:54:02</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -433,7 +457,7 @@
             </article>
 
             <!-- 2025 江阴半程马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:28:44" data-date="2025-04-13">
                 <div class="race-header">
                     <span class="race-date">2025.04.13</span>
                     <span class="race-name">江阴半程马拉松</span>
@@ -448,7 +472,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 江阴</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:28:44</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -459,7 +483,7 @@
             </article>
 
             <!-- 2025 江宁大学城半程马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:39:48" data-date="2025-03-23">
                 <div class="race-header">
                     <span class="race-date">2025.03.23</span>
                     <span class="race-name">江宁大学城半程马拉松</span>
@@ -474,7 +498,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:39:48</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -485,7 +509,7 @@
             </article>
 
             <!-- 2024 泰州半程马拉松 -->
-            <article class="race-card">
+            <article class="race-card" data-time="1:30:38" data-date="2024-10-20">
                 <div class="race-header">
                     <span class="race-date">2024.10.20</span>
                     <span class="race-name">泰州半程马拉松</span>
@@ -500,7 +524,7 @@
                         <div class="race-meta">
                             <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 泰州</span>
                             <span class="meta-item"><i class="fas fa-clock"></i> 1:30:38</span>
-                            <span class="meta-item"><i class="fas fa-trophy"></i> 首马完赛</span>
+                            <span class="race-status">完赛</span>
                         </div>
                         <div class="race-note">
                             <h4>参赛感想</h4>
@@ -521,7 +545,50 @@
                     this.classList.toggle('active');
                 });
             });
+            
+            calculatePB();
         });
+        
+        function timeToSeconds(timeStr) {
+            var parts = timeStr.split(':');
+            var hours = parseInt(parts[0]) || 0;
+            var minutes = parseInt(parts[1]) || 0;
+            var seconds = parseInt(parts[2]) || 0;
+            return hours * 3600 + minutes * 60 + seconds;
+        }
+        
+        function calculatePB() {
+            var raceCards = Array.from(document.querySelectorAll('.race-card'));
+            
+            raceCards.sort(function(a, b) {
+                var dateA = a.getAttribute('data-date');
+                var dateB = b.getAttribute('data-date');
+                return dateA.localeCompare(dateB);
+            });
+            
+            var bestTime = null;
+            var isFirstRace = true;
+            
+            raceCards.forEach(function(card) {
+                var timeStr = card.getAttribute('data-time');
+                var currentTime = timeToSeconds(timeStr);
+                var statusElement = card.querySelector('.race-status');
+                
+                if (isFirstRace) {
+                    statusElement.textContent = '首马完赛';
+                    statusElement.classList.add('first-race');
+                    bestTime = currentTime;
+                    isFirstRace = false;
+                } else if (currentTime < bestTime) {
+                    statusElement.textContent = 'PB';
+                    statusElement.classList.add('personal-best');
+                    bestTime = currentTime;
+                } else {
+                    statusElement.textContent = '完赛';
+                    statusElement.classList.add('completed');
+                }
+            });
+        }
     </script>
 </body>
 </html>
