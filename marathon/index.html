@@ -11,166 +11,239 @@
     <meta content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: ../fig/; font-src https://cdnjs.cloudflare.com; connect-src 'self';" http-equiv="Content-Security-Policy">
     <title>马拉松记录 - 李凯</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/theme.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
-            --text-gray: #666;
-            --border-color: #e0e0e0;
-        }
-        
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .back-home {
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 30px;
-            display: block;
-        }
-        
-        .back-home:hover {
-            text-decoration: underline;
-        }
-        
-        .header {
+        /* 页面头部 */
+        .page-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 48px;
+            padding: 40px 0 20px;
         }
         
-        .header h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+        .page-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
         }
         
-        .header p {
-            color: var(--text-gray);
-            font-size: 1.1rem;
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ef4444, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
         }
         
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        
+        /* 统计数据 */
         .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
         }
         
         .stat-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            padding: 25px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 28px 20px;
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #f97316);
+        }
+        
+        .stat-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+        
+        .stat-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #10b981, #14b8a6);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
         
         .stat-value {
-            font-size: 2rem;
-            color: var(--accent-color);
-            font-weight: bold;
-            display: block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 6px;
         }
+        
+        .stat-card:nth-child(1) .stat-value { color: #dc2626; }
+        .stat-card:nth-child(2) .stat-value { color: #2563eb; }
+        .stat-card:nth-child(3) .stat-value { color: #059669; }
         
         .stat-label {
             font-size: 0.9rem;
-            color: var(--text-gray);
-            margin-top: 5px;
+            color: var(--text-muted);
+            font-weight: 500;
         }
         
+        /* 比赛列表 */
         .race-list {
-            display: grid;
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
         
         .race-card {
-            background: white;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: var(--shadow-sm);
             overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            transition: all var(--transition-normal);
         }
         
         .race-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-md);
         }
         
         .race-card.active {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(239, 68, 68, 0.3);
         }
         
         .race-header {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            padding: 20px 25px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
+            gap: 16px;
+            padding: 20px 24px;
+            cursor: pointer;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.04) 0%, transparent 50%);
+            transition: background var(--transition-fast);
         }
         
-        .race-date {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-right: 20px;
+        .race-header:hover {
+            background: rgba(239, 68, 68, 0.06);
+        }
+        
+        .race-date-box {
+            flex-shrink: 0;
+            text-align: center;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-radius: var(--radius-sm);
+            color: white;
+            min-width: 60px;
+        }
+        
+        .race-date-box .month {
+            font-size: 0.75rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .race-date-box .day {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .race-info {
+            flex: 1;
+            min-width: 0;
         }
         
         .race-name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            flex: 1;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .race-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .race-meta-row span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
         
         .race-type {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 15px;
+            padding: 2px 8px;
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
         
         .race-toggle {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: all var(--transition-normal);
         }
         
         .race-card.active .race-toggle {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
             transform: rotate(180deg);
         }
         
         .race-content {
-            padding: 25px;
-            display: none;
-            animation: fadeIn 0.3s ease;
-            gap: 25px;
-            align-items: flex-start;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
         }
         
         .race-card.active .race-content {
-            display: flex;
+            max-height: 600px;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .race-content-inner {
+            padding: 0 24px 24px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
         
         .race-image-container {
@@ -183,9 +256,9 @@
             width: 100%;
             height: auto;
             max-height: 280px;
-            object-fit: contain;
-            border-radius: 6px;
-            background: #f5f5f5;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
             display: block;
         }
         
@@ -194,78 +267,97 @@
             min-width: 0;
         }
         
-        .race-meta {
+        .race-stats {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 16px;
             margin-bottom: 20px;
         }
         
-        .meta-item {
+        .race-stat-item {
             display: flex;
             align-items: center;
-            color: var(--text-gray);
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
             font-size: 0.9rem;
         }
         
-        .meta-item i {
-            margin-right: 8px;
-            color: var(--secondary-color);
+        .race-stat-item i {
+            color: #ef4444;
         }
         
-        .race-status {
+        .race-stat-item strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .race-status-badge {
             display: inline-block;
             padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            text-align: center;
         }
         
-        .race-status.completed {
-            background-color: #e8f5e9;
-            color: #2e7d32;
+        .race-status-badge.completed {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
         }
         
-        .race-status.personal-best {
-            background-color: #fff3e0;
-            color: #e65100;
+        .race-status-badge.personal-best {
+            background: rgba(245, 158, 11, 0.12);
+            color: #d97706;
         }
         
-        .race-status.first-race {
-            background-color: #e3f2fd;
-            color: #1565c0;
+        .race-status-badge.first-race {
+            background: rgba(59, 130, 246, 0.12);
+            color: #2563eb;
         }
         
         .race-note {
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-        
-        .race-note p {
-            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
         }
         
         .race-note h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .empty-note {
-            color: var(--text-gray);
-            font-style: italic;
+        .race-note h4::before {
+            content: '';
+            width: 3px;
+            height: 16px;
+            background: #ef4444;
+            border-radius: 2px;
         }
         
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 15px;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
+        /* 入场动画 */
+        .page-header { animation: fadeInUp 0.6s ease both; }
+        .stat-card:nth-child(1) { animation: fadeInUp 0.5s ease 0.1s both; }
+        .stat-card:nth-child(2) { animation: fadeInUp 0.5s ease 0.2s both; }
+        .stat-card:nth-child(3) { animation: fadeInUp 0.5s ease 0.3s both; }
+        .race-card:nth-child(1) { animation: fadeInUp 0.5s ease 0.4s both; }
+        .race-card:nth-child(2) { animation: fadeInUp 0.5s ease 0.5s both; }
+        .race-card:nth-child(3) { animation: fadeInUp 0.5s ease 0.6s both; }
+        .race-card:nth-child(4) { animation: fadeInUp 0.5s ease 0.7s both; }
+        .race-card:nth-child(5) { animation: fadeInUp 0.5s ease 0.8s both; }
+        .race-card:nth-child(6) { animation: fadeInUp 0.5s ease 0.9s both; }
+        .race-card:nth-child(7) { animation: fadeInUp 0.5s ease 1.0s both; }
+        .race-card:nth-child(8) { animation: fadeInUp 0.5s ease 1.1s both; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
             }
             
             .stats-row {
@@ -273,20 +365,17 @@
             }
             
             .race-header {
-                flex-direction: row;
+                padding: 16px;
+                gap: 12px;
             }
             
             .race-name {
-                flex: 1;
-                min-width: 120px;
+                font-size: 1rem;
             }
             
-            .race-type {
-                margin-right: 10px;
-            }
-            
-            .race-content {
+            .race-content-inner {
                 flex-direction: column;
+                padding: 16px;
             }
             
             .race-image-container {
@@ -295,12 +384,13 @@
                 margin: 0 auto;
             }
             
-            .race-image {
-                max-height: 250px;
+            .race-date-box {
+                min-width: 50px;
+                padding: 6px 8px;
             }
             
-            .race-details {
-                width: 100%;
+            .race-date-box .day {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -309,24 +399,27 @@
     <div class="container">
         <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
         
-        <header class="header">
-            <h1><i class="fas fa-running"></i> 马拉松记录</h1>
-            <p>每一步都是对自我的挑战，每一场比赛都是一次成长</p>
+        <header class="page-header">
+            <div class="page-icon">
+                <i class="fas fa-running"></i>
+            </div>
+            <h1 class="page-title">马拉松记录</h1>
+            <p class="page-subtitle">每一步都是对自我的挑战，每一场比赛都是一次成长</p>
         </header>
 
         <!-- 统计数据 -->
         <section class="stats-row">
             <div class="stat-card">
-                <span class="stat-value">8</span>
-                <span class="stat-label">参赛场次</span>
+                <div class="stat-value">8</div>
+                <div class="stat-label">参赛场次</div>
             </div>
             <div class="stat-card">
-                <span class="stat-value">168</span>
-                <span class="stat-label">累计里程 (km)</span>
+                <div class="stat-value">168<span style="font-size: 1rem; font-weight: 500;">km</span></div>
+                <div class="stat-label">累计里程</div>
             </div>
             <div class="stat-card">
-                <span class="stat-value">1:27:33</span>
-                <span class="stat-label">半马最佳</span>
+                <div class="stat-value">1:27:33</div>
+                <div class="stat-label">半马最佳 (PB)</div>
             </div>
         </section>
 
@@ -335,24 +428,38 @@
             <!-- 2026 南京仙林半程马拉松 -->
             <article class="race-card" data-time="1:27:33" data-date="2026-04-12">
                 <div class="race-header">
-                    <span class="race-date">2026.04.12</span>
-                    <span class="race-name">南京仙林半程马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2026.04</div>
+                        <div class="day">12</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">南京仙林半程马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 南京</span>
+                            <span><i class="fas fa-clock"></i> 1:27:33</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/26仙马.jpg" alt="南京仙林半程马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:27:33</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/26仙马.jpg" alt="南京仙林半程马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>雨中奔跑，赛道虽有缓坡但体感很棒！最近事务繁忙，一个多月来每周仅能跑一次，能跑出1:27的成绩已相当满意。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span class="race-status-badge personal-best">PB · 个人最佳</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>雨中奔跑，赛道虽有缓坡但体感很棒！最近事务繁忙，一个多月来每周仅能跑一次，能跑出1:27的成绩已相当满意。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -361,24 +468,38 @@
             <!-- 2026 武汉马拉松 -->
             <article class="race-card" data-time="1:47:59" data-date="2026-03-22">
                 <div class="race-header">
-                    <span class="race-date">2026.03.22</span>
-                    <span class="race-name">武汉马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2026.03</div>
+                        <div class="day">22</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">武汉马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 武汉</span>
+                            <span><i class="fas fa-clock"></i> 1:47:59</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/26汉马.jpg" alt="武汉马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 武汉</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:47:59</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/26汉马.jpg" alt="武汉马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>赛前一周因打游戏不慎腰伤，只能压着速度跑。途中恍惚间似见故人，却不敢相认。汉马的氛围真的绝了，志愿者热情似火，整座城市都为奔跑而沸腾。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span class="race-status-badge completed">完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>赛前一周因打游戏不慎腰伤，只能压着速度跑。途中恍惚间似见故人，却不敢相认。汉马的氛围真的绝了，志愿者热情似火，整座城市都为奔跑而沸腾。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -387,24 +508,38 @@
             <!-- 2026 宁海马拉松 -->
             <article class="race-card" data-time="1:30:22" data-date="2026-03-08">
                 <div class="race-header">
-                    <span class="race-date">2026.03.08</span>
-                    <span class="race-name">宁海马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2026.03</div>
+                        <div class="day">08</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">宁海马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
+                            <span><i class="fas fa-clock"></i> 1:30:22</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/26宁海.jpg" alt="宁海马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 宁波宁海</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:30:22</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/26宁海.jpg" alt="宁海马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>赛道平坦舒适，本想赛后去看海，奈何体力不支未能成行。当地的面食口味实在不敢恭维。寒假几乎没系统训练，能跑出1:30的成绩已是惊喜。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span class="race-status-badge completed">完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>赛道平坦舒适，本想赛后去看海，奈何体力不支未能成行。当地的面食口味实在不敢恭维。寒假几乎没系统训练，能跑出1:30的成绩已是惊喜。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -413,24 +548,38 @@
             <!-- 2025 千岛湖马拉松 -->
             <article class="race-card" data-time="1:35:52" data-date="2025-11-30">
                 <div class="race-header">
-                    <span class="race-date">2025.11.30</span>
-                    <span class="race-name">千岛湖马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2025.11</div>
+                        <div class="day">30</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">千岛湖马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
+                            <span><i class="fas fa-clock"></i> 1:35:52</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/25千岛湖.jpg" alt="千岛湖马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州淳安</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:35:52</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/25千岛湖.jpg" alt="千岛湖马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>湖光山色，美不胜收，真有种想在此养老的冲动！但赛道难度远超预期，连绵陡坡令人崩溃，后半程完全掉速。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span class="race-status-badge completed">完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>湖光山色，美不胜收，真有种想在此养老的冲动！但赛道难度远超预期，连绵陡坡令人崩溃，后半程完全掉速。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -439,24 +588,38 @@
             <!-- 2025 临安半程马拉松 -->
             <article class="race-card" data-time="1:54:02" data-date="2025-10-19">
                 <div class="race-header">
-                    <span class="race-date">2025.10.19</span>
-                    <span class="race-name">临安半程马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2025.10</div>
+                        <div class="day">19</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">临安半程马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
+                            <span><i class="fas fa-clock"></i> 1:54:02</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/25临安.jpg" alt="临安半程马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 杭州临安</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:54:02</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/25临安.jpg" alt="临安半程马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>赛前一天畅游青山湖，景色宜人。赛道平坦，与陈子毅结伴而行。无奈足底筋膜炎作祟，只能前脚掌踮地跑，脚趾胀痛如血管欲裂，一路跑跑停停。神奇的是，冲过终点后伤痛竟似痊愈。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span class="race-status-badge completed">完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>赛前一天畅游青山湖，景色宜人。赛道平坦，与陈子毅结伴而行。无奈足底筋膜炎作祟，只能前脚掌踮地跑，脚趾胀痛如血管欲裂，一路跑跑停停。神奇的是，冲过终点后伤痛竟似痊愈。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -465,24 +628,38 @@
             <!-- 2025 江阴半程马拉松 -->
             <article class="race-card" data-time="1:28:44" data-date="2025-04-13">
                 <div class="race-header">
-                    <span class="race-date">2025.04.13</span>
-                    <span class="race-name">江阴半程马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2025.04</div>
+                        <div class="day">13</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">江阴半程马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 江阴</span>
+                            <span><i class="fas fa-clock"></i> 1:28:44</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/25江阴.jpg" alt="江阴半程马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 江阴</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:28:44</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/25江阴.jpg" alt="江阴半程马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>赛前大腿受伤，整整一个月未系统训练。如果不是赛道实际距离比标准多出300-400米，就到1:27了。但最终还是大包小包拎回家，已心满意足。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span class="race-status-badge personal-best">当时 PB</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>赛前大腿受伤，整整一个月未系统训练。如果不是赛道实际距离比标准多出300-400米，就到1:27了。但最终还是大包小包拎回家，已心满意足。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -491,24 +668,38 @@
             <!-- 2025 江宁大学城半程马拉松 -->
             <article class="race-card" data-time="1:39:48" data-date="2025-03-23">
                 <div class="race-header">
-                    <span class="race-date">2025.03.23</span>
-                    <span class="race-name">江宁大学城半程马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2025.03</div>
+                        <div class="day">23</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">江宁大学城半程马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
+                            <span><i class="fas fa-clock"></i> 1:39:48</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/25江宁.jpg" alt="江宁大学城半程马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 南京江宁</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:39:48</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/25江宁.jpg" alt="江宁大学城半程马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>伤后恢复的首场比赛，赛前未在当地留宿，清晨打车奔赴赛场，行程略显仓促。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span class="race-status-badge completed">完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>伤后恢复的首场比赛，赛前未在当地留宿，清晨打车奔赴赛场，行程略显仓促。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -517,24 +708,38 @@
             <!-- 2024 泰州半程马拉松 -->
             <article class="race-card" data-time="1:30:38" data-date="2024-10-20">
                 <div class="race-header">
-                    <span class="race-date">2024.10.20</span>
-                    <span class="race-name">泰州半程马拉松</span>
-                    <span class="race-type">半程马拉松</span>
-                    <i class="fas fa-chevron-down race-toggle"></i>
+                    <div class="race-date-box">
+                        <div class="month">2024.10</div>
+                        <div class="day">20</div>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-name">泰州半程马拉松</div>
+                        <div class="race-meta-row">
+                            <span class="race-type">半程马拉松</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 泰州</span>
+                            <span><i class="fas fa-clock"></i> 1:30:38</span>
+                        </div>
+                    </div>
+                    <div class="race-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
                 <div class="race-content">
-                    <div class="race-image-container">
-                        <img src="../fig/marathon/24泰州.jpg" alt="泰州半程马拉松" class="race-image">
-                    </div>
-                    <div class="race-details">
-                        <div class="race-meta">
-                            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> 泰州</span>
-                            <span class="meta-item"><i class="fas fa-clock"></i> 1:30:38</span>
-                            <span class="race-status">完赛</span>
+                    <div class="race-content-inner">
+                        <div class="race-image-container">
+                            <img src="../fig/marathon/24泰州.jpg" alt="泰州半程马拉松" class="race-image">
                         </div>
-                        <div class="race-note">
-                            <h4>参赛感想</h4>
-                            <p>人生首场半马！赛道整体平坦，仅两座桥梁略有起伏。最后6公里堪称炼狱，咬牙坚持才得以完赛。</p>
+                        <div class="race-details">
+                            <div class="race-stats">
+                                <div class="race-stat-item">
+                                    <i class="fas fa-flag-checkered"></i>
+                                    <span class="race-status-badge first-race">首马完赛</span>
+                                </div>
+                            </div>
+                            <div class="race-note">
+                                <h4>参赛感想</h4>
+                                <p>人生首场半马！赛道整体平坦，仅两座桥梁略有起伏。最后6公里堪称炼狱，咬牙坚持才得以完赛。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -547,12 +752,11 @@
             var raceCards = document.querySelectorAll('.race-card');
             
             raceCards.forEach(function(card) {
-                card.addEventListener('click', function() {
-                    this.classList.toggle('active');
+                var header = card.querySelector('.race-header');
+                header.addEventListener('click', function() {
+                    card.classList.toggle('active');
                 });
             });
-            
-            calculatePB();
         });
         
         function timeToSeconds(timeStr) {
@@ -578,20 +782,17 @@
             raceCards.forEach(function(card) {
                 var timeStr = card.getAttribute('data-time');
                 var currentTime = timeToSeconds(timeStr);
-                var statusElement = card.querySelector('.race-status');
+                var statusElement = card.querySelector('.race-status-badge');
                 
                 if (isFirstRace) {
                     statusElement.textContent = '首马完赛';
-                    statusElement.classList.add('first-race');
+                    statusElement.className = 'race-status-badge first-race';
                     bestTime = currentTime;
                     isFirstRace = false;
                 } else if (currentTime < bestTime) {
-                    statusElement.textContent = 'PB';
-                    statusElement.classList.add('personal-best');
+                    statusElement.textContent = 'PB · 个人最佳';
+                    statusElement.className = 'race-status-badge personal-best';
                     bestTime = currentTime;
-                } else {
-                    statusElement.textContent = '完赛';
-                    statusElement.classList.add('completed');
                 }
             });
         }

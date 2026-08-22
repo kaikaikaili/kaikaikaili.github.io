@@ -1,0 +1,259 @@
+/* ============================================
+   李凯个人主页 - 全局美化样式
+   主题：大气科学 · 深蓝天穹
+   ============================================ */
+
+/* ---------- CSS 变量 ---------- */
+:root {
+    /* 主色调 - 天空与海洋的深邃 */
+    --primary: #1e3a5f;
+    --primary-light: #2c5282;
+    --primary-dark: #152a45;
+    
+    /* 强调色 - 晴空与云 */
+    --accent: #38bdf8;
+    --accent-light: #7dd3fc;
+    --accent-dark: #0ea5e9;
+    
+    /* 辅助色 - 日落金 */
+    --gold: #f59e0b;
+    --gold-light: #fbbf24;
+    
+    /* 背景色 */
+    --bg-primary: #f0f4f8;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e8eef5;
+    
+    /* 文字色 */
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    /* 边框与阴影 */
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(30, 58, 95, 0.08);
+    --shadow-md: 0 4px 12px rgba(30, 58, 95, 0.1);
+    --shadow-lg: 0 10px 30px rgba(30, 58, 95, 0.12);
+    --shadow-xl: 0 20px 50px rgba(30, 58, 95, 0.15);
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #38bdf8 100%);
+    --gradient-sky: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 50%, #ffffff 100%);
+    --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    
+    /* 圆角 */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    /* 过渡 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ---------- 基础重置 ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ---------- 背景装饰 - 云纹效果 ---------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(245, 158, 11, 0.05), transparent),
+        radial-gradient(ellipse 50% 30% at 10% 60%, rgba(30, 58, 95, 0.05), transparent);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ---------- 通用容器 ---------- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- 返回按钮 ---------- */
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    margin-bottom: 32px;
+}
+
+.back-home:hover {
+    background: var(--bg-secondary);
+    border-color: var(--accent);
+    color: var(--accent-dark);
+    transform: translateX(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.back-home i {
+    transition: transform var(--transition-fast);
+}
+
+.back-home:hover i {
+    transform: translateX(-2px);
+}
+
+/* ---------- 卡片通用样式 ---------- */
+.card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* ---------- 标题通用样式 ---------- */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title::before {
+    content: '';
+    width: 4px;
+    height: 28px;
+    background: var(--gradient-accent);
+    border-radius: 2px;
+}
+
+/* ---------- 标签/徽章 ---------- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 20px;
+    line-height: 1.5;
+}
+
+.badge-primary {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-dark);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-gold {
+    background: rgba(245, 158, 11, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-green {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-purple {
+    background: rgba(139, 92, 246, 0.12);
+    color: #7c3aed;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* ---------- 动画 ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
+    50% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.4); }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 16px;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .section-title::before {
+        height: 24px;
+    }
+}

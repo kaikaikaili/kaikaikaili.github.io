@@ -11,144 +11,315 @@
     <meta content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data:; font-src https://cdnjs.cloudflare.com; connect-src 'self';" http-equiv="Content-Security-Policy">
     <title>学术成果 - 李凯</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/theme.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
-            --text-gray: #666;
-            --border-color: #e0e0e0;
+        /* 页面头部 */
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 40px 0 20px;
         }
         
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
         }
         
-        .back-home {
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 30px;
-            display: block;
+        /* 统计概览 */
+        .pub-overview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 36px;
         }
         
-        .back-home:hover {
-            text-decoration: underline;
+        .overview-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
         }
         
-        .header {
-            margin-bottom: 40px;
+        .overview-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
         }
         
-        .header h1 {
-            color: var(--primary-color);
+        .overview-number {
             font-size: 2rem;
-            font-weight: 600;
-            margin: 0;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .overview-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* 论文列表 */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
         .pub-item {
-            background: white;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 28px;
             border: 1px solid var(--border-color);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
             position: relative;
+            overflow: hidden;
+        }
+        
+        .pub-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-accent);
         }
         
         .pub-item:hover {
-            border-color: var(--secondary-color);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transform: translateY(-3px);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(56, 189, 248, 0.3);
         }
         
-        .status-tag {
-            font-size: 0.7rem;
-            padding: 4px 12px;
-            border: 1px solid var(--secondary-color);
-            color: var(--secondary-color);
-            background: rgba(52, 152, 219, 0.1);
-            border-radius: 15px;
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .pub-type-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .pub-title-group {
+            flex: 1;
+            min-width: 0;
         }
         
         .pub-title {
+            font-size: 1.15rem;
             font-weight: 600;
-            color: var(--primary-color);
-            margin: 10px 0 15px 0;
-            display: block;
-            font-size: 1.1rem;
+            color: var(--primary);
+            line-height: 1.5;
+            margin-bottom: 8px;
         }
         
         .pub-authors {
             font-size: 0.95rem;
-            color: var(--text-gray);
+            color: var(--text-secondary);
             margin-bottom: 8px;
+            line-height: 1.6;
         }
         
         .pub-authors b {
-            color: var(--primary-color);
+            color: var(--primary);
+            font-weight: 600;
         }
         
         .pub-venue {
-            font-style: italic;
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        
-        .link-group {
-            margin-top: 15px;
-        }
-        
-        .link-group a {
-            color: var(--text-gray);
-            text-decoration: none;
-            margin-right: 15px;
             font-size: 0.9rem;
-            transition: color 0.3s ease;
+            color: var(--accent-dark);
+            font-style: italic;
+            margin-bottom: 16px;
         }
         
-        .link-group a:hover {
-            color: var(--secondary-color);
+        .pub-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
         }
         
+        .pub-tag {
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .pub-tag.conference {
+            background: rgba(139, 92, 246, 0.1);
+            color: #7c3aed;
+        }
+        
+        .pub-tag.journal {
+            background: rgba(14, 165, 233, 0.1);
+            color: #0284c7;
+        }
+        
+        .pub-tag.preprint {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+        }
+        
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--bg-tertiary);
+        }
+        
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+        }
+        
+        .pub-link:hover {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-dark);
+            transform: translateY(-1px);
+        }
+        
+        .pub-link i {
+            font-size: 0.9rem;
+        }
+        
+        /* 状态标签 */
+        .status-badge {
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+        
+        .status-badge.published {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .status-badge.in-preparation {
+            background: rgba(245, 158, 11, 0.12);
+            color: #d97706;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .status-badge.under-review {
+            background: rgba(59, 130, 246, 0.12);
+            color: #2563eb;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        /* 结尾注释 */
         .end-note {
             text-align: center;
-            color: var(--text-gray);
-            font-size: 0.8rem;
-            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding: 20px;
+            font-style: italic;
+            position: relative;
         }
         
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 15px;
+        .end-note::before,
+        .end-note::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 1px;
+            background: var(--border-color);
+        }
+        
+        .end-note::before {
+            left: calc(50% - 100px);
+        }
+        
+        .end-note::after {
+            right: calc(50% - 100px);
+        }
+        
+        /* 入场动画 */
+        .page-header { animation: fadeInUp 0.6s ease both; }
+        .overview-card:nth-child(1) { animation: fadeInUp 0.5s ease 0.1s both; }
+        .overview-card:nth-child(2) { animation: fadeInUp 0.5s ease 0.2s both; }
+        .overview-card:nth-child(3) { animation: fadeInUp 0.5s ease 0.3s both; }
+        .pub-item:nth-child(1) { animation: fadeInUp 0.5s ease 0.4s both; }
+        .pub-item:nth-child(2) { animation: fadeInUp 0.5s ease 0.5s both; }
+        .end-note { animation: fadeIn 0.5s ease 0.6s both; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .pub-overview {
+                grid-template-columns: 1fr;
             }
             
             .pub-item {
                 padding: 20px;
             }
             
-            .status-tag {
-                position: static;
-                display: inline-block;
-                margin-bottom: 10px;
+            .pub-header {
+                flex-direction: column;
+            }
+            
+            .pub-title {
+                font-size: 1.05rem;
+            }
+            
+            .end-note::before,
+            .end-note::after {
+                width: 30px;
+            }
+            
+            .end-note::before {
+                left: calc(50% - 70px);
+            }
+            
+            .end-note::after {
+                right: calc(50% - 70px);
             }
         }
     </style>
@@ -157,34 +328,85 @@
     <div class="container">
         <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
         
-        <div class="header">
-            <h1>学术成果</h1>
-        </div>
-
-        <!-- 示例项目 1 -->
-        <div class="pub-item">
-            <span class="status-tag">准备中</span>
-            <span class="pub-title">Deep Learning Retrieval of Vertical Velocity from Spaceborne Dual-Frequency Radar in Typhoons</span>
-            <p class="pub-authors"><b>Li, K.</b>, and Co-authors</p>
-            <p class="pub-venue">Journal of Atmospheric and Oceanic Technology</p>
-            <div class="link-group">
-                <a href="#"><i class="fas fa-file-pdf"></i> 预印本</a>
-                <a href="#"><i class="fab fa-github"></i> 代码</a>
+        <header class="page-header">
+            <h1 class="page-title">学术成果</h1>
+            <p class="page-subtitle">Publications & Research Outputs</p>
+        </header>
+        
+        <!-- 统计概览 -->
+        <div class="pub-overview">
+            <div class="overview-card">
+                <div class="overview-number">2</div>
+                <div class="overview-label">论文总数</div>
             </div>
-        </div>
-
-        <!-- 示例项目 2 -->
-        <div class="pub-item">
-            <span class="status-tag">已发表</span>
-            <span class="pub-title">Improving Radar Reflectivity Correction via Machine Learning</span>
-            <p class="pub-authors"><b>Li, K.</b>, et al.</p>
-            <p class="pub-venue">2024 Chinese Meteorological Society Annual Meeting</p>
-            <div class="link-group">
-                <a href="#"><i class="fas fa-desktop"></i> 幻灯片</a>
+            <div class="overview-card">
+                <div class="overview-number">1</div>
+                <div class="overview-label">已发表</div>
+            </div>
+            <div class="overview-card">
+                <div class="overview-number">1</div>
+                <div class="overview-label">准备中</div>
             </div>
         </div>
         
-        <p class="end-note">-- 记录结束 --</p>
+        <!-- 论文列表 -->
+        <div class="pub-list">
+            <!-- 论文 1 -->
+            <article class="pub-item">
+                <div class="pub-header">
+                    <div style="display: flex; gap: 16px; flex: 1; min-width: 0;">
+                        <div class="pub-type-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="pub-title-group">
+                            <h3 class="pub-title">Deep Learning Retrieval of Vertical Velocity from Spaceborne Dual-Frequency Radar in Typhoons</h3>
+                            <p class="pub-authors"><b>Li, K.</b>, and Co-authors</p>
+                            <p class="pub-venue">Journal of Atmospheric and Oceanic Technology</p>
+                            <div class="pub-tags">
+                                <span class="pub-tag journal">期刊论文</span>
+                                <span class="pub-tag preprint">预印本</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="status-badge in-preparation">准备中</span>
+                </div>
+                <div class="pub-links">
+                    <a href="#" class="pub-link">
+                        <i class="fas fa-file-pdf"></i> 预印本
+                    </a>
+                    <a href="#" class="pub-link">
+                        <i class="fab fa-github"></i> 代码
+                    </a>
+                </div>
+            </article>
+
+            <!-- 论文 2 -->
+            <article class="pub-item">
+                <div class="pub-header">
+                    <div style="display: flex; gap: 16px; flex: 1; min-width: 0;">
+                        <div class="pub-type-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <div class="pub-title-group">
+                            <h3 class="pub-title">Improving Radar Reflectivity Correction via Machine Learning</h3>
+                            <p class="pub-authors"><b>Li, K.</b>, et al.</p>
+                            <p class="pub-venue">2024 Chinese Meteorological Society Annual Meeting</p>
+                            <div class="pub-tags">
+                                <span class="pub-tag conference">会议论文</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="status-badge published">已发表</span>
+                </div>
+                <div class="pub-links">
+                    <a href="#" class="pub-link">
+                        <i class="fas fa-desktop"></i> 幻灯片
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <p class="end-note">— 更多研究成果持续更新中 —</p>
     </div>
 </body>
 </html>

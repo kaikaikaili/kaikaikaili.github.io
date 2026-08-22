@@ -11,139 +11,307 @@
     <meta content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: ../fig/; font-src https://cdnjs.cloudflare.com; connect-src 'self';" http-equiv="Content-Security-Policy">
     <title>个人简介 - 李凯</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/theme.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
-            --text-gray: #666;
-            --border-color: #e0e0e0;
+        /* 页面头部 */
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 40px 0 20px;
         }
         
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
         }
         
-        .back-home {
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            display: block;
-            font-weight: 500;
-        }
-        
-        .back-home:hover {
-            text-decoration: underline;
-        }
-        
+        /* 内容区块 */
         .section {
-            background: white;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 24px;
             border: 1px solid var(--border-color);
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-normal);
         }
+        
+        .section:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--bg-tertiary);
+        }
+        
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .section-icon.bio { background: linear-gradient(135deg, #38bdf8, #0ea5e9); }
+        .section-icon.edu { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .section-icon.skill { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .section-icon.interest { background: linear-gradient(135deg, #10b981, #059669); }
         
         .section-title {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
         }
         
+        .section-title::before {
+            display: none;
+        }
+        
+        /* 个人简介 */
         .bio-text {
-            color: var(--text-dark);
+            color: var(--text-secondary);
             font-size: 1rem;
-            line-height: 1.7;
+            line-height: 1.9;
         }
         
         .bio-text b {
-            color: var(--primary-color);
-        }
-
-        .edu-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            border-left: 3px solid var(--secondary-color);
+            color: var(--primary);
+            font-weight: 600;
         }
         
-        .date {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 5px;
+        /* 教育经历时间线 */
+        .timeline {
+            position: relative;
+            padding-left: 24px;
         }
         
-        .edu-item p {
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), var(--primary-light));
+            border-radius: 1px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 28px;
+            padding-left: 16px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            border: 3px solid var(--accent);
+            z-index: 1;
+        }
+        
+        .timeline-item:last-child::before {
+            border-color: var(--primary-light);
+        }
+        
+        .timeline-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            margin-bottom: 8px;
+            padding: 4px 10px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 6px;
+        }
+        
+        .timeline-item:last-child .timeline-date {
+            color: var(--primary-light);
+            background: rgba(30, 58, 95, 0.08);
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
             margin: 0;
-            color: var(--text-dark);
         }
-
+        
+        /* 技能条 */
         .skill-bar-container {
             margin-bottom: 20px;
+        }
+        
+        .skill-bar-container:last-child {
+            margin-bottom: 0;
         }
         
         .skill-label {
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text-dark);
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-name i {
+            color: var(--accent);
+            width: 18px;
+            text-align: center;
+        }
+        
+        .skill-percent {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-light);
         }
         
         .skill-bar {
-            height: 8px;
-            background: var(--border-color);
-            border-radius: 4px;
+            height: 10px;
+            background: var(--bg-tertiary);
+            border-radius: 5px;
             overflow: hidden;
         }
         
         .skill-progress {
             height: 100%;
-            background: var(--secondary-color);
-            border-radius: 4px;
-        }
-        
-        .interests-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .interests-list li {
-            margin-bottom: 10px;
-            padding-left: 25px;
+            border-radius: 5px;
+            background: var(--gradient-accent);
             position: relative;
+            transition: width 1s ease;
         }
         
-        .interests-list li i {
+        .skill-progress::after {
+            content: '';
             position: absolute;
+            top: 0;
             left: 0;
-            top: 3px;
-            color: var(--secondary-color);
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
         }
         
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 15px;
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* 兴趣爱好 */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .interest-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 24px 16px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-normal);
+        }
+        
+        .interest-item:hover {
+            transform: translateY(-4px);
+            background: rgba(56, 189, 248, 0.08);
+        }
+        
+        .interest-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 12px;
+        }
+        
+        .interest-icon.run { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .interest-icon.book { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .interest-icon.code { background: linear-gradient(135deg, #10b981, #059669); }
+        
+        .interest-text {
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+        
+        .interest-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* 入场动画 */
+        .page-header { animation: fadeInUp 0.6s ease both; }
+        .section:nth-child(1) { animation: fadeInUp 0.5s ease 0.1s both; }
+        .section:nth-child(2) { animation: fadeInUp 0.5s ease 0.2s both; }
+        .section:nth-child(3) { animation: fadeInUp 0.5s ease 0.3s both; }
+        .section:nth-child(4) { animation: fadeInUp 0.5s ease 0.4s both; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
             }
             
             .section {
-                padding: 20px;
+                padding: 24px;
+            }
+            
+            .interests-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -152,48 +320,124 @@
     <div class="container">
         <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回主页</a>
         
+        <header class="page-header">
+            <h1 class="page-title">个人简介</h1>
+            <p class="page-subtitle">About Me</p>
+        </header>
+        
+        <!-- 个人简介 -->
         <div class="section">
-            <h2 class="section-title">个人简介</h2>
+            <div class="section-header">
+                <div class="section-icon bio">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2 class="section-title">关于我</h2>
+            </div>
             <p class="bio-text">
-                我是 <b>李凯 (Likai)</b>，目前是南京大学大气科学学院“拔尖计划”本科生。我的研究领域位于 <b>大气科学</b>、<b>雷达气象学</b> 与 <b>深度学习</b> 的交汇点。我热衷于利用先进的人工智能算法，解析复杂的云物理过程及降水垂直结构，特别是在极端天气系统（如台风）中的应用。
+                我是 <b>李凯 (Likai)</b>，目前是南京大学大气科学学院"拔尖计划"本科生。我的研究领域位于 <b>大气科学</b>、<b>雷达气象学</b> 与 <b>深度学习</b> 的交汇点。我热衷于利用先进的人工智能算法，解析复杂的云物理过程及降水垂直结构，特别是在极端天气系统（如台风）中的应用。
             </p>
         </div>
 
+        <!-- 教育背景 -->
         <div class="section">
-            <h2 class="section-title">教育背景</h2>
-            <div class="edu-item">
-                <div class="date">2022 - 至今</div>
-                <p><b>南京大学 (NJU)</b><br>大气科学（拔尖计划）· 本科</p>
+            <div class="section-header">
+                <div class="section-icon edu">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="section-title">教育背景</h2>
             </div>
-            <div class="edu-item">
-                <div class="date">2026 - 预计</div>
-                <p><b>南京大学 (NJU)</b><br>雷达气象/云微物理 · 博士（直博项目）</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2022 - 至今
+                    </div>
+                    <div class="timeline-content">
+                        <h4>南京大学 (NJU)</h4>
+                        <p>大气科学（拔尖计划）· 本科</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2026 - 预计
+                    </div>
+                    <div class="timeline-content">
+                        <h4>南京大学 (NJU)</h4>
+                        <p>雷达气象/云微物理 · 博士（直博项目）</p>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- 技能矩阵 -->
         <div class="section">
-            <h2 class="section-title">技能矩阵</h2>
-            <div class="skill-bar-container">
-                <div class="skill-label"><span>PYTHON / PYTORCH (深度学习)</span><span>85%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            <div class="section-header">
+                <div class="section-icon skill">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h2 class="section-title">技能矩阵</h2>
             </div>
             <div class="skill-bar-container">
-                <div class="skill-label"><span>雷达数据分析</span><span>75%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                <div class="skill-label">
+                    <span class="skill-name"><i class="fab fa-python"></i> Python / PyTorch (深度学习)</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
             </div>
             <div class="skill-bar-container">
-                <div class="skill-label"><span>大气动力学</span><span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                <div class="skill-label">
+                    <span class="skill-name"><i class="fas fa-satellite"></i> 雷达数据分析</span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-bar-container">
+                <div class="skill-label">
+                    <span class="skill-name"><i class="fas fa-cloud"></i> 大气动力学</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
             </div>
         </div>
 
+        <!-- 兴趣爱好 -->
         <div class="section">
-            <h2 class="section-title">兴趣爱好</h2>
-            <ul class="interests-list">
-                <li><i class="fas fa-running"></i> 长距离跑步 (业余半马选手在役)</li>
-                <li><i class="fas fa-book"></i> 阅读科技文献</li>
-                <li><i class="fas fa-laptop-code"></i> 编程与算法设计</li>
-            </ul>
+            <div class="section-header">
+                <div class="section-icon interest">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2 class="section-title">兴趣爱好</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <div class="interest-icon run">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <span class="interest-text">长距离跑步</span>
+                    <span class="interest-desc">业余半马选手在役</span>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon book">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <span class="interest-text">阅读科技文献</span>
+                    <span class="interest-desc">追踪前沿研究</span>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon code">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <span class="interest-text">编程与算法</span>
+                    <span class="interest-desc">热爱技术探索</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
