@@ -1,0 +1,86 @@
+[
+  {
+    "code": "BL1",
+    "name": "德甲",
+    "total": 1224,
+    "finished": 999,
+    "upcoming": 225
+  },
+  {
+    "code": "BSA",
+    "name": "巴甲",
+    "total": 1520,
+    "finished": 1487,
+    "upcoming": 33
+  },
+  {
+    "code": "CL",
+    "name": "欧冠",
+    "total": 647,
+    "finished": 575,
+    "upcoming": 72
+  },
+  {
+    "code": "CLI",
+    "name": "解放者杯",
+    "total": 465,
+    "finished": 464,
+    "upcoming": 0
+  },
+  {
+    "code": "DED",
+    "name": "荷甲",
+    "total": 1224,
+    "finished": 1026,
+    "upcoming": 198
+  },
+  {
+    "code": "ELC",
+    "name": "英冠",
+    "total": 2223,
+    "finished": 1851,
+    "upcoming": 372
+  },
+  {
+    "code": "FL1",
+    "name": "法甲",
+    "total": 1224,
+    "finished": 1008,
+    "upcoming": 216
+  },
+  {
+    "code": "PD",
+    "name": "西甲",
+    "total": 1520,
+    "finished": 1259,
+    "upcoming": 260
+  },
+  {
+    "code": "PL",
+    "name": "英超",
+    "total": 1520,
+    "finished": 1240,
+    "upcoming": 280
+  },
+  {
+    "code": "PPL",
+    "name": "葡超",
+    "total": 612,
+    "finished": 404,
+    "upcoming": 208
+  },
+  {
+    "code": "SA",
+    "name": "意甲",
+    "total": 1520,
+    "finished": 1250,
+    "upcoming": 270
+  },
+  {
+    "code": "WC",
+    "name": "世界杯",
+    "total": 104,
+    "finished": 104,
+    "upcoming": 0
+  }
+]
