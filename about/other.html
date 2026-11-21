@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDENTITY - 李凯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --neon-blue: #00f2ff; --bg-dark: #050a0f; --text-gray: #a0aec0; }
+        body {
+            background-color: var(--bg-dark); color: #fff; font-family: monospace;
+            background-image: linear-gradient(rgba(0,242,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,242,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px; line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .back-home { text-decoration: none; color: var(--neon-blue); font-size: 0.9rem; margin-bottom: 30px; display: block; }
+        
+        .section { background: rgba(10,25,41,0.7); border: 1px solid rgba(0,242,255,0.2); padding: 30px; margin-bottom: 25px; position: relative; }
+        .section-title { color: var(--neon-blue); border-bottom: 1px solid var(--neon-blue); margin-bottom: 20px; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .bio-text { color: var(--text-gray); font-size: 0.95rem; }
+        .bio-text b { color: #fff; }
+
+        .edu-item { margin-bottom: 15px; border-left: 2px solid var(--neon-blue); padding-left: 15px; }
+        .date { color: var(--neon-blue); font-size: 0.8rem; }
+
+        .skill-bar-container { margin-bottom: 15px; }
+        .skill-label { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px; }
+        .skill-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--neon-blue); box-shadow: 0 0 10px var(--neon-blue); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-home"><i class="fas fa-terminal"></i> ESC_BACK_TO_TERMINAL</a>
+        
+        <div class="section">
+            <h2 class="section-title">01_BIOGRAPHY</h2>
+            <p class="bio-text">
+                我是 <b>李凯 (Likai)</b>，目前是南京大学大气科学学院“拔尖计划”本科生。我的研究领域位于 <b>大气科学</b>、<b>雷达气象学</b> 与 <b>深度学习</b> 的交汇点。我热衷于利用先进的人工智能算法，解析复杂的云物理过程及降水垂直结构，特别是在极端天气系统（如台风）中的应用。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">02_EDUCATION</h2>
+            <div class="edu-item">
+                <div class="date">2022 - PRESENT</div>
+                <p><b>南京大学 (NJU)</b><br>大气科学（拔尖计划）· 本科</p>
+            </div>
+            <div class="edu-item">
+                <div class="date">2026 - (EXPECTED)</div>
+                <p><b>南京大学 (NJU)</b><br>雷达气象/云微物理 · 博士（直博项目）</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">03_SKILL_MATRIX</h2>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>PYTHON / PYTORCH (Deep Learning)</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>RADAR DATA ANALYSIS</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <div class="skill-label"><span>ATMOSPHERIC DYNAMICS</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">04_INTERESTS</h2>
+            <p class="bio-text">
+                <i class="fas fa-running"></i> 长距离跑步 (业余半马选手在役) <br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

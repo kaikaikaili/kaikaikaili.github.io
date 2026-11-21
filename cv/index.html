@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Li Kai's Homepage</title>
+    <meta name="author" content="Li Kai">
+    <style>
+        /* 全局设置：使用rem和vw单位实现自适应字体大小 */
+        html {
+            font-size: 16px; /* 默认基准字体大小 */
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        /* 标题字体大小 */
+        h1 {
+            font-size: 2.5rem; /* 相对于根字体 */
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        /* 段落字体大小 */
+        p {
+            font-size: 1rem;
+        }
+
+        /* 表格字体大小 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1rem; /* 默认表格文字 */
+        }
+
+        table td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        /* 链接样式 */
+        a {
+            text-decoration: none;
+            color: #3498DB;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            border: none;
+        }
+
+        .large-image {
+            height: 30vw; /* 基于视口宽度调整大小 */
+        }
+
+        .medium-image {
+            height: 10vw;
+        }
+
+        .small-image {
+            height: 5vw;
+        }
+
+        /* 媒体查询：小屏设备时缩小字体 */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px; /* 基准字体缩小 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 12px; /* 更小设备时继续调整 */
+            }
+
+            .large-image {
+                height: 30vw;
+            }
+
+            .medium-image {
+                height: 15vw;
+            }
+
+            .small-image {
+                height: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="width: 45%;">
+                <img src="/fig/lk.jpg" alt="My image" class="large-image" />
+            </td>
+            <td>
+                <h1>Li Kai(李凯)</h1>
+                <h2>Undergraduate</h2>
+                <p>I am mainly interested in the formation mechanisms of damaging weather, especially lightning.</p>
+                <pre>
+School of Atmospheric Sciences, Nanjing University
+Email: 221200031@smail.nju.edu.cn
+       likai221200031@qq.com
+       lkk339997@gmail.com
+                </pre>
+                <div style="text-align: center; padding: 10px; background-color: #f9f9f9; border-radius: 5px;">
+        <a href="./Likai_CV.pdf" target="_blank" style="font-size: 1.25rem; font-weight: bold; margin: 0 10px;">pdf_CV</a> 
+        <span style="font-size: 1.25rem; margin: 0 10px;">|</span>
+        <a href="Research.html" style="font-size: 1.25rem; font-weight: bold; margin: 0 10px;">by Topic</a> 
+        <span style="font-size: 1.25rem; margin: 0 10px;">|</span>
+        <a href="Hobbies.html" style="font-size: 1.25rem; font-weight: bold; margin: 0 10px;">Hobbies</a>
+    </div>
+        </tr>
+    </table>
+
+    <hr>
+    <h2>Career</h2>
+    <table>
+        <tr>
+            <td>Mudu Senior High School</td>
+            <td>2016.9 - 2022.6</td>
+        </tr>
+        <tr>
+            <td>Nanjing University</td>
+            <td>2022.9 - Present</td>
+            <td>Advisor: <a href="https://as.nju.edu.cn/a2/cb/c11341a303819/page.htm">Huang, H.</a></td>
+        </tr>
+    </table>
+
+    <hr>
+    <h2>Projects</h2>
+    <table>
+        <tr>
+            <td>2023.12 - 2025.12</td>
+            <td>基于深度学习的双偏振雷达冰雹和短临预报研究 (Main Researcher)</td>
+            <td>Huang, H.</td>
+        </tr>
+        <tr>
+            <td>2023.12 - 2025.12</td>
+            <td>基于深度学习的对环境因子影响雷暴形成的分析研究 (Main Researcher)</td>
+            <td><a href="https://as.nju.edu.cn/6e/7c/c11339a421500/page.htm">Wang, S.</a></td>
+        </tr>
+        <tr>
+            <td>2024.8.3 - 2024.8.12</td>
+            <td>中芬赫尔辛基大气与地球系统国际科考与科研训练项目 (Member, Completed)</td>
+            <td><a href="https://as.nju.edu.cn/29/3f/c11339a534847/page.htm">Nie, W.</a> &amp; <a href="https://nh.nju.edu.cn/info/1051/5091.htm">Yan, C.</a></td>
+        </tr>
+        <tr>
+            <td>2024.5 - 2024.11</td>
+            <td>挑战杯“揭榜挂帅”专项赛·毫米波云雷达非气象目标智能识别技术研究 (Member, Completed, First Prize)</td>
+            <td><a href="https://as.nju.edu.cn/29/3f/c11339a534847/page.htm">Yuan, H.</a> &amp; Huang, H.</td>
+        </tr>
+        <tr>
+            <td>2024.12 - 2025.12</td>
+            <td>机器学习模型在台风预报中的误差增长研究 (Member, Pending)</td>
+            <td><a href="https://as.nju.edu.cn/54/52/c11339a218194/page.htm">Lei, L.</a> &amp; <a href="https://as.nju.edu.cn/54/60/c11341a218208/page.htm">Zhang, Y.</a></td>
+        </tr>
+    </table>
+
+    <hr>
+    <h2>Prizes</h2>
+    <table>
+        <tr>
+            <td>2023.10</td>
+            <td>南京大学本科生基础学科专项奖学金·优秀奖</td>
+        </tr>
+        <tr>
+            <td>2023.10</td>
+            <td>浦蓝大气奖学金 (院级)</td>
+        </tr>
+        <tr>
+            <td>2024.12</td>
+            <td>人民奖学金·二等奖</td>
+        </tr>
+    </table>
+
+    <hr>
+    <p class="footer"><i>Last Modified: Dec 22, 2024</i></p>
+</body>
+</html>
