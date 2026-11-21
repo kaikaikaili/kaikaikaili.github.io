@@ -2,42 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lkk31.xyz/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/en/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/about/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/publications/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://lkk31.xyz/research/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://lkk31.xyz/cv/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/blog/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://lkk31.xyz/blog/posts/radar-deep-learning.html</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://lkk31.xyz/blog/posts/marathon-running.html</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/blog/posts/weekly-review-2026-11-21/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/running/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/running/year-review/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/running/half/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://lkk31.xyz/footy/</loc>
-    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
 </urlset>
