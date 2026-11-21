@@ -1,0 +1,425 @@
+{
+ "generated": "2026-11-21",
+ "year": 2026,
+ "weeks": [
+  {
+   "monday": "2025-12-29",
+   "km": 37.38,
+   "runs": 3,
+   "dur_min": 175,
+   "avg_pace_s": 280,
+   "fastest_pace_s": 266,
+   "longest_km": 20.26
+  },
+  {
+   "monday": "2026-01-05",
+   "km": 12.39,
+   "runs": 7,
+   "dur_min": 57,
+   "avg_pace_s": 276,
+   "fastest_pace_s": 227,
+   "longest_km": 4.42
+  },
+  {
+   "monday": "2026-01-12",
+   "km": 2.44,
+   "runs": 1,
+   "dur_min": 11,
+   "avg_pace_s": 270,
+   "fastest_pace_s": 270,
+   "longest_km": 2.44
+  },
+  {
+   "monday": "2026-01-19",
+   "km": 5.0,
+   "runs": 1,
+   "dur_min": 22,
+   "avg_pace_s": 269,
+   "fastest_pace_s": 269,
+   "longest_km": 5.0
+  },
+  {
+   "monday": "2026-03-09",
+   "km": 14.94,
+   "runs": 5,
+   "dur_min": 76,
+   "avg_pace_s": 303,
+   "fastest_pace_s": 256,
+   "longest_km": 5.85
+  },
+  {
+   "monday": "2026-03-23",
+   "km": 1.55,
+   "runs": 1,
+   "dur_min": 8,
+   "avg_pace_s": 310,
+   "fastest_pace_s": 309,
+   "longest_km": 1.55
+  },
+  {
+   "monday": "2026-03-30",
+   "km": 0.29,
+   "runs": 1,
+   "dur_min": 1,
+   "avg_pace_s": 293,
+   "fastest_pace_s": 294,
+   "longest_km": 0.29
+  },
+  {
+   "monday": "2026-04-06",
+   "km": 13.46,
+   "runs": 2,
+   "dur_min": 61,
+   "avg_pace_s": 274,
+   "fastest_pace_s": 260,
+   "longest_km": 7.47
+  },
+  {
+   "monday": "2026-04-13",
+   "km": 16.11,
+   "runs": 5,
+   "dur_min": 78,
+   "avg_pace_s": 290,
+   "fastest_pace_s": 280,
+   "longest_km": 5.13
+  },
+  {
+   "monday": "2026-04-20",
+   "km": 25.16,
+   "runs": 3,
+   "dur_min": 106,
+   "avg_pace_s": 253,
+   "fastest_pace_s": 248,
+   "longest_km": 12.65
+  },
+  {
+   "monday": "2026-04-27",
+   "km": 19.62,
+   "runs": 2,
+   "dur_min": 91,
+   "avg_pace_s": 279,
+   "fastest_pace_s": 272,
+   "longest_km": 15.02
+  },
+  {
+   "monday": "2026-05-04",
+   "km": 17.24,
+   "runs": 4,
+   "dur_min": 78,
+   "avg_pace_s": 273,
+   "fastest_pace_s": 261,
+   "longest_km": 6.38
+  },
+  {
+   "monday": "2026-05-11",
+   "km": 6.69,
+   "runs": 1,
+   "dur_min": 26,
+   "avg_pace_s": 237,
+   "fastest_pace_s": 237,
+   "longest_km": 6.69
+  },
+  {
+   "monday": "2026-05-18",
+   "km": 25.73,
+   "runs": 8,
+   "dur_min": 119,
+   "avg_pace_s": 279,
+   "fastest_pace_s": 213,
+   "longest_km": 8.24
+  },
+  {
+   "monday": "2026-05-25",
+   "km": 28.79,
+   "runs": 5,
+   "dur_min": 127,
+   "avg_pace_s": 265,
+   "fastest_pace_s": 246,
+   "longest_km": 7.5
+  },
+  {
+   "monday": "2026-06-01",
+   "km": 54.06,
+   "runs": 4,
+   "dur_min": 261,
+   "avg_pace_s": 290,
+   "fastest_pace_s": 270,
+   "longest_km": 15.88
+  },
+  {
+   "monday": "2026-06-08",
+   "km": 44.23,
+   "runs": 5,
+   "dur_min": 204,
+   "avg_pace_s": 276,
+   "fastest_pace_s": 250,
+   "longest_km": 15.1
+  },
+  {
+   "monday": "2026-06-15",
+   "km": 28.04,
+   "runs": 4,
+   "dur_min": 128,
+   "avg_pace_s": 274,
+   "fastest_pace_s": 264,
+   "longest_km": 13.15
+  },
+  {
+   "monday": "2026-06-22",
+   "km": 16.21,
+   "runs": 3,
+   "dur_min": 71,
+   "avg_pace_s": 265,
+   "fastest_pace_s": 257,
+   "longest_km": 8.19
+  },
+  {
+   "monday": "2026-06-29",
+   "km": 11.33,
+   "runs": 2,
+   "dur_min": 48,
+   "avg_pace_s": 257,
+   "fastest_pace_s": 250,
+   "longest_km": 6.2
+  },
+  {
+   "monday": "2026-07-06",
+   "km": 18.51,
+   "runs": 3,
+   "dur_min": 88,
+   "avg_pace_s": 285,
+   "fastest_pace_s": 262,
+   "longest_km": 10.08
+  },
+  {
+   "monday": "2026-07-20",
+   "km": 10.66,
+   "runs": 3,
+   "dur_min": 49,
+   "avg_pace_s": 274,
+   "fastest_pace_s": 265,
+   "longest_km": 7.17
+  },
+  {
+   "monday": "2026-07-27",
+   "km": 25.66,
+   "runs": 6,
+   "dur_min": 119,
+   "avg_pace_s": 278,
+   "fastest_pace_s": 270,
+   "longest_km": 7.12
+  },
+  {
+   "monday": "2026-08-03",
+   "km": 28.78,
+   "runs": 5,
+   "dur_min": 139,
+   "avg_pace_s": 289,
+   "fastest_pace_s": 272,
+   "longest_km": 11.06
+  },
+  {
+   "monday": "2026-08-10",
+   "km": 7.22,
+   "runs": 3,
+   "dur_min": 34,
+   "avg_pace_s": 278,
+   "fastest_pace_s": 275,
+   "longest_km": 5.07
+  },
+  {
+   "monday": "2026-08-24",
+   "km": 20.5,
+   "runs": 7,
+   "dur_min": 97,
+   "avg_pace_s": 284,
+   "fastest_pace_s": 255,
+   "longest_km": 5.99
+  },
+  {
+   "monday": "2026-08-31",
+   "km": 28.01,
+   "runs": 8,
+   "dur_min": 131,
+   "avg_pace_s": 281,
+   "fastest_pace_s": 246,
+   "longest_km": 6.14
+  },
+  {
+   "monday": "2026-09-07",
+   "km": 20.07,
+   "runs": 5,
+   "dur_min": 93,
+   "avg_pace_s": 278,
+   "fastest_pace_s": 256,
+   "longest_km": 7.07
+  },
+  {
+   "monday": "2026-09-14",
+   "km": 25.69,
+   "runs": 8,
+   "dur_min": 120,
+   "avg_pace_s": 280,
+   "fastest_pace_s": 248,
+   "longest_km": 10.0
+  },
+  {
+   "monday": "2026-09-21",
+   "km": 31.87,
+   "runs": 7,
+   "dur_min": 161,
+   "avg_pace_s": 304,
+   "fastest_pace_s": 279,
+   "longest_km": 8.0
+  },
+  {
+   "monday": "2026-09-28",
+   "km": 22.53,
+   "runs": 7,
+   "dur_min": 118,
+   "avg_pace_s": 314,
+   "fastest_pace_s": 284,
+   "longest_km": 11.41
+  },
+  {
+   "monday": "2026-10-05",
+   "km": 63.06,
+   "runs": 7,
+   "dur_min": 325,
+   "avg_pace_s": 309,
+   "fastest_pace_s": 237,
+   "longest_km": 16.01
+  },
+  {
+   "monday": "2026-10-12",
+   "km": 27.23,
+   "runs": 6,
+   "dur_min": 141,
+   "avg_pace_s": 311,
+   "fastest_pace_s": 276,
+   "longest_km": 10.52
+  },
+  {
+   "monday": "2026-10-19",
+   "km": 44.49,
+   "runs": 6,
+   "dur_min": 233,
+   "avg_pace_s": 314,
+   "fastest_pace_s": 290,
+   "longest_km": 15.15
+  },
+  {
+   "monday": "2026-10-26",
+   "km": 19.63,
+   "runs": 4,
+   "dur_min": 91,
+   "avg_pace_s": 279,
+   "fastest_pace_s": 239,
+   "longest_km": 6.03
+  },
+  {
+   "monday": "2026-11-02",
+   "km": 28.27,
+   "runs": 10,
+   "dur_min": 144,
+   "avg_pace_s": 306,
+   "fastest_pace_s": 222,
+   "longest_km": 5.25
+  },
+  {
+   "monday": "2026-11-09",
+   "km": 25.1,
+   "runs": 6,
+   "dur_min": 118,
+   "avg_pace_s": 281,
+   "fastest_pace_s": 223,
+   "longest_km": 10.08
+  },
+  {
+   "monday": "2026-11-16",
+   "km": 31.1,
+   "runs": 9,
+   "dur_min": 145,
+   "avg_pace_s": 279,
+   "fastest_pace_s": 190,
+   "longest_km": 12.0
+  }
+ ],
+ "months": {
+  "2026-11": [
+   84.5,
+   25
+  ],
+  "2026-10": [
+   165.8,
+   24
+  ],
+  "2026-09": [
+   108.8,
+   31
+  ],
+  "2026-08": [
+   71.6,
+   19
+  ],
+  "2026-07": [
+   53.9,
+   12
+  ],
+  "2026-06": [
+   147.7,
+   17
+  ],
+  "2026-05": [
+   78.4,
+   18
+  ],
+  "2026-04": [
+   74.6,
+   13
+  ],
+  "2026-03": [
+   16.5,
+   6
+  ],
+  "2026-01": [
+   57.2,
+   12
+  ]
+ },
+ "totals": {
+  "km": 859.0,
+  "runs": 177,
+  "hours": 68.3,
+  "active_days": 129
+ },
+ "highlights": {
+  "fastest": {
+   "date": "2026-11-20",
+   "type": "赛道跑",
+   "km": 1.51,
+   "dur_s": 286,
+   "pace_s": 190,
+   "hr": 176,
+   "ts": 1795155074
+  },
+  "longest": {
+   "date": "2026-01-02",
+   "type": "赛道跑",
+   "km": 20.26,
+   "dur_s": 5832,
+   "pace_s": 288,
+   "hr": 162,
+   "ts": 1767342071
+  },
+  "best5k": {
+   "date": "2026-11-08",
+   "type": "户外跑",
+   "km": 5.16,
+   "dur_s": 1144,
+   "pace_s": 222,
+   "hr": 174,
+   "ts": 1794098793
+  }
+ }
+}

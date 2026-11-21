@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 年度跑步海报</title>
+<style>
+body { margin: 0; background: #0f1420; }
+.toolbar {
+  position: fixed; top: 16px; right: 16px; z-index: 10;
+  display: flex; gap: 10px;
+}
+.toolbar a, .toolbar button {
+  font: 600 13px/1 'Instrument Sans', 'PingFang SC', system-ui, sans-serif;
+  color: #e8ecf4; background: #1e2536; border: 1px solid #2a3247;
+  border-radius: 8px; padding: 10px 16px; cursor: pointer; text-decoration: none;
+}
+.toolbar a:hover, .toolbar button:hover { border-color: #3d9bff; color: #3d9bff; }
+.stage { display: flex; justify-content: center; padding: 24px 0 48px; }
+.stage img { width: min(92vw, 860px); height: auto; border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+@media print {
+  .toolbar { display: none; }
+  body { background: #0f1420; }
+  .stage { padding: 0; }
+  .stage img { width: 100vw; border-radius: 0; box-shadow: none; }
+  @page { size: 261mm 369mm; margin: 0; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <a href="./../2026-poster.svg" download>下载 SVG</a>
+  <button onclick="window.print()">打印 / 存为 PDF</button>
+  <a href="./../">返回档案</a>
+</div>
+<div class="stage">
+  <img src="./../2026-poster.svg" alt="2026 年度跑步海报">
+</div>
+</body>
+</html>
