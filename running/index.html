@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>跑步档案 · 2026</title>
-<meta name="description" content="基于 COROS PACE 3 的年度跑步档案：周跑量、配速趋势、训练负荷与周报时间轴。">
+<title>跑步档案 · 2024–2026</title>
+<meta name="description" content="基于 COROS PACE 3 的多年跑步档案：2024–2026 年度对比、周跑量、配速趋势与晨跑气象指数。">
 <style>
 :root {
   --bg: #0f1420; --bg2: #171d2c; --bg3: #1e2536;
@@ -46,6 +46,45 @@ body::before {
 .hero h1 { font-family: 'Instrument Sans', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.2; color: var(--ink); margin-bottom: 10px; }
 .hero .sub { color: var(--muted); font-size: 14px; }
 .hero .period { color: var(--accent2); font-weight: 600; }
+.year-tabs { display: flex; gap: 8px; margin-top: 20px; }
+.ytab {
+  font-family: 'Instrument Sans', monospace; font-size: 13px; letter-spacing: 0.06em;
+  padding: 6px 18px; border-radius: 999px; border: 1px solid var(--rule);
+  background: rgba(23,29,44,0.7); color: var(--muted); cursor: pointer; transition: all .15s;
+}
+.ytab:hover { color: var(--ink); border-color: var(--accent); }
+.ytab.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+/* 晨跑指数卡 */
+.wx-grid { display: grid; grid-template-columns: 220px 1fr; gap: 16px; margin-bottom: 14px; }
+.wx-card { background: rgba(23,29,44,0.7); border: 1px solid var(--rule); border-radius: var(--radius); padding: 20px; backdrop-filter: blur(8px); }
+.wx-score-box { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.wx-ring { position: relative; width: 120px; height: 120px; margin-bottom: 12px; }
+.wx-ring svg { transform: rotate(-90deg); }
+.wx-ring .wx-num {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: 'Instrument Sans', sans-serif;
+}
+.wx-ring .wx-num b { font-size: 36px; font-weight: 700; line-height: 1; color: var(--ink); }
+.wx-ring .wx-num span { font-size: 10px; color: var(--muted); margin-top: 4px; letter-spacing: 0.1em; }
+.wx-grade { font-family: 'Instrument Sans', sans-serif; font-size: 16px; font-weight: 700; }
+.wx-advice { color: var(--ink-dim); font-size: 12.5px; line-height: 1.6; margin-top: 8px; }
+.wx-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.wx-metric { background: rgba(30,37,54,0.6); border: 1px solid var(--rule); border-radius: var(--radius); padding: 12px 14px; }
+.wx-metric .wx-m-label { font-family: 'Instrument Sans', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.wx-metric .wx-m-value { font-family: 'Instrument Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--ink); }
+.wx-metric .wx-m-value small { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 2px; }
+.wx-metric .wx-m-sub { font-size: 11px; color: var(--ink-dim); margin-top: 2px; }
+.wx-fc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.wx-fc-day { background: rgba(30,37,54,0.6); border: 1px solid var(--rule); border-radius: var(--radius); padding: 12px 14px; text-align: center; }
+.wx-fc-day .wx-f-date { font-family: 'Instrument Sans', monospace; font-size: 11px; color: var(--muted); }
+.wx-fc-day .wx-f-desc { font-size: 13px; color: var(--ink); margin: 4px 0; font-weight: 600; }
+.wx-fc-day .wx-f-detail { font-size: 11px; color: var(--ink-dim); line-height: 1.5; }
+.wx-src { color: var(--muted); font-size: 11px; font-family: 'Instrument Sans', monospace; letter-spacing: 0.04em; }
+.wx-error { color: var(--warn); font-size: 13px; }
+@media (max-width: 640px) {
+  .wx-grid { grid-template-columns: 1fr; }
+  .wx-ring { width: 100px; height: 100px; }
+}
 section { margin-bottom: 48px; }
 .section-title {
   font-family: 'Instrument Sans', sans-serif; font-size: 20px; font-weight: 700;
@@ -104,31 +143,68 @@ footer .sig { font-family: 'Instrument Sans', monospace; letter-spacing: 0.1em; 
 
 <header class="hero">
   <div class="hero-label">COROS · Running Archive</div>
-  <h1>跑步档案 <span style="color:var(--accent);">2026</span></h1>
+  <h1>跑步档案 <span style="color:var(--accent);" id="hero-year">2026</span></h1>
   <div class="sub">
-    数据周期 <span class="period">2026-01-01 → 2026-11-21</span>
+    数据周期 <span class="period" id="hero-period">2026-01-01 → 2026-11-21</span>
     &nbsp;·&nbsp; 男 · 172cm · 66.5kg
     &nbsp;·&nbsp; COROS PACE 3
   </div>
+  <div class="year-tabs" id="year-tabs">
+    <button class="ytab" data-year="2024">2024</button>
+    <button class="ytab" data-year="2025">2025</button>
+    <button class="ytab active" data-year="2026">2026</button>
+  </div>
 </header>
+
+<section id="wx-section">
+  <div class="section-title"><span class="num">☀</span>今晨适跑指数
+    <span style="font-size:11px;color:var(--muted);font-weight:400;margin-left:auto;letter-spacing:0.04em;">大气科学视角 · Open-Meteo 实时气象</span>
+  </div>
+  <div class="wx-grid">
+    <div class="wx-card wx-score-box">
+      <div class="wx-ring">
+        <svg width="120" height="120">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="var(--rule)" stroke-width="10"/>
+          <circle id="wx-arc" cx="60" cy="60" r="52" fill="none" stroke="var(--accent)" stroke-width="10"
+                  stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+        </svg>
+        <div class="wx-num"><b id="wx-score">—</b><span>适跑指数</span></div>
+      </div>
+      <div class="wx-grade" id="wx-grade">加载中…</div>
+      <div class="wx-advice" id="wx-advice">正在获取南京实时气象数据…</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-metrics">
+        <div class="wx-metric"><div class="wx-m-label">气温</div><div class="wx-m-value" id="wx-temp">—</div><div class="wx-m-sub" id="wx-feels"></div></div>
+        <div class="wx-metric"><div class="wx-m-label">风速</div><div class="wx-m-value" id="wx-wind">—</div><div class="wx-m-sub">地面 10m 风</div></div>
+        <div class="wx-metric"><div class="wx-m-label">降水</div><div class="wx-m-value" id="wx-precip">—</div><div class="wx-m-sub" id="wx-prob"></div></div>
+        <div class="wx-metric"><div class="wx-m-label">相对湿度</div><div class="wx-m-value" id="wx-rh">—</div><div class="wx-m-sub" id="wx-rh-sub"></div></div>
+        <div class="wx-metric"><div class="wx-m-label">天气实况</div><div class="wx-m-value" id="wx-desc" style="font-size:16px;">—</div><div class="wx-m-sub" id="wx-now"></div></div>
+      </div>
+      <div class="wx-fc" id="wx-fc"></div>
+    </div>
+  </div>
+  <div class="wx-src" id="wx-src">数据来源：Open-Meteo（ECMWF IFS 模式）· 南京 32.05°N 118.78°E · 更新于 --:--</div>
+</section>
 
 <section>
   <div class="section-title"><span class="num">01</span>年度总览</div>
-  <div class="section-desc">2026 年累计数据（自动聚合自每次训练记录）</div>
+  <div class="section-desc" id="desc-kpi">2026 年累计数据（自动聚合自每次训练记录）</div>
   <div class="kpi-grid">
-    <div class="kpi-card accent"><div class="kpi-label">总里程</div><div class="kpi-value" id="kpi-km">—</div><div class="kpi-unit">km</div><div class="kpi-sub">38 个训练周</div></div>
-    <div class="kpi-card accent"><div class="kpi-label">训练次数</div><div class="kpi-value" id="kpi-runs">—</div><div class="kpi-unit">次</div><div class="kpi-sub">129 个跑步日</div></div>
+    <div class="kpi-card accent"><div class="kpi-label">总里程</div><div class="kpi-value" id="kpi-km">—</div><div class="kpi-unit">km</div><div class="kpi-sub" id="kpi-weeks-sub">38 个训练周</div></div>
+    <div class="kpi-card accent"><div class="kpi-label">训练次数</div><div class="kpi-value" id="kpi-runs">—</div><div class="kpi-unit">次</div><div class="kpi-sub" id="kpi-days-sub">129 个跑步日</div></div>
     <div class="kpi-card accent2"><div class="kpi-label">运动时长</div><div class="kpi-value" id="kpi-hours">—</div><div class="kpi-unit">h</div><div class="kpi-sub">累计在跑时间</div></div>
-    <div class="kpi-card"><div class="kpi-label">VO₂max</div><div class="kpi-value">64</div><div class="kpi-sub">Running Level 94 · 前 6%</div></div>
-    <div class="kpi-card"><div class="kpi-label">阈值配速</div><div class="kpi-value">3:47</div><div class="kpi-unit">/km</div><div class="kpi-sub">预估半马 1:21:36</div></div>
+    <div class="kpi-card only-2026"><div class="kpi-label">VO₂max</div><div class="kpi-value">64</div><div class="kpi-sub">Running Level 94 · 前 6%</div></div>
+    <div class="kpi-card only-2026"><div class="kpi-label">阈值配速</div><div class="kpi-value">3:47</div><div class="kpi-unit">/km</div><div class="kpi-sub">预估半马 1:21:36</div></div>
     <div class="kpi-card accent2"><div class="kpi-label">最佳 5km 配速</div><div class="kpi-value" id="kpi-best5k">—</div><div class="kpi-unit">/km</div><div class="kpi-sub" id="kpi-best5k-sub">单次 ≥5km 记录</div></div>
   </div>
 </section>
 
 <section>
   <div class="section-title"><span class="num">02</span>跑量走势</div>
-  <div class="section-desc">月度跑量与周跑量、年度累计里程曲线</div>
-  <figure class="chart-figure"><figcaption>月跑量（km · 2026）</figcaption><div id="chart-month" style="width:100%;min-height:300px"></div></figure>
+  <div class="section-desc">跨年对比、月度跑量与周跑量、年度累计里程曲线（点击顶部年份切换）</div>
+  <figure class="chart-figure"><figcaption>跨年对比（2024 → 2026 · 年度总里程与训练次数）</figcaption><div id="chart-years" style="width:100%;min-height:300px"></div></figure>
+  <figure class="chart-figure"><figcaption id="cap-month">月跑量（km · 2026）</figcaption><div id="chart-month" style="width:100%;min-height:300px"></div></figure>
   <figure class="chart-figure"><figcaption>周跑量与累计里程（km · 周一起算）</figcaption><div id="chart-week" style="width:100%;min-height:340px"></div></figure>
 </section>
 
@@ -143,8 +219,8 @@ footer .sig { font-family: 'Instrument Sans', monospace; letter-spacing: 0.1em; 
     <figure class="chart-figure"><figcaption>周最长单次距离（km）</figcaption><div id="chart-longest" style="width:100%;min-height:280px"></div></figure>
     <figure class="chart-figure"><figcaption>周训练次数（次）</figcaption><div id="chart-freq" style="width:100%;min-height:280px"></div></figure>
   </div>
-  <div class="insight"><div class="insight-title">✓ 6 月与 10 月为两个跑量峰</div><p>6 月 <b>147.7 km</b>、10 月 <b>165.8 km</b> 为年度双峰，对应夏训积累与秋季赛事周期；2 月休整未训练。9 月起训练频次显著提升（30 次），配速同步变快，训练系统化程度提高。</p></div>
-  <div class="insight recover"><div class="insight-title">✓ 长距离基准</div><p>年度最长单次 <b>20.26 km</b>（01-02）；近两个月周最长单次稳定在 10–15 km 区间，长距离耐力基础扎实，为后续半马测试做好准备。</p></div>
+  <div class="insight only-2026"><div class="insight-title">✓ 6 月与 10 月为两个跑量峰</div><p>6 月 <b>147.7 km</b>、10 月 <b>165.8 km</b> 为年度双峰，对应夏训积累与秋季赛事周期；2 月休整未训练。9 月起训练频次显著提升（30 次），配速同步变快，训练系统化程度提高。</p></div>
+  <div class="insight recover only-2026"><div class="insight-title">✓ 长距离基准</div><p>年度最长单次 <b>20.26 km</b>（01-02）；近两个月周最长单次稳定在 10–15 km 区间，长距离耐力基础扎实，为后续半马测试做好准备。</p></div>
 </section>
 
 <section>
@@ -178,5 +254,6 @@ footer .sig { font-family: 'Instrument Sans', monospace; letter-spacing: 0.1em; 
 </div>
 <script src="./../_assets/echarts.min.js"></script>
 <script src="assets/charts.js"></script>
+<script src="assets/weather.js"></script>
 </body>
 </html>

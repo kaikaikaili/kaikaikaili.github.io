@@ -1,0 +1,173 @@
+{
+ "generated": "2024-12-31",
+ "year": 2024,
+ "period": "2024-01-01 → 2024-12-31",
+ "weeks": [
+  {
+   "monday": "2024-10-07",
+   "km": 5.01,
+   "runs": 1,
+   "dur_min": 22,
+   "avg_pace_s": 262,
+   "fastest_pace_s": 263,
+   "longest_km": 5.01
+  },
+  {
+   "monday": "2024-10-14",
+   "km": 43.46,
+   "runs": 6,
+   "dur_min": 194,
+   "avg_pace_s": 267,
+   "fastest_pace_s": 261,
+   "longest_km": 21.77
+  },
+  {
+   "monday": "2024-10-21",
+   "km": 34.37,
+   "runs": 9,
+   "dur_min": 146,
+   "avg_pace_s": 255,
+   "fastest_pace_s": 229,
+   "longest_km": 7.01
+  },
+  {
+   "monday": "2024-10-28",
+   "km": 41.91,
+   "runs": 8,
+   "dur_min": 176,
+   "avg_pace_s": 252,
+   "fastest_pace_s": 222,
+   "longest_km": 10.06
+  },
+  {
+   "monday": "2024-11-04",
+   "km": 19.02,
+   "runs": 4,
+   "dur_min": 79,
+   "avg_pace_s": 249,
+   "fastest_pace_s": 233,
+   "longest_km": 10.01
+  },
+  {
+   "monday": "2024-11-11",
+   "km": 32.05,
+   "runs": 10,
+   "dur_min": 132,
+   "avg_pace_s": 247,
+   "fastest_pace_s": 173,
+   "longest_km": 6.21
+  },
+  {
+   "monday": "2024-11-18",
+   "km": 27.82,
+   "runs": 11,
+   "dur_min": 113,
+   "avg_pace_s": 243,
+   "fastest_pace_s": 171,
+   "longest_km": 6.91
+  },
+  {
+   "monday": "2024-11-25",
+   "km": 44.57,
+   "runs": 13,
+   "dur_min": 178,
+   "avg_pace_s": 239,
+   "fastest_pace_s": 221,
+   "longest_km": 9.99
+  },
+  {
+   "monday": "2024-12-02",
+   "km": 26.33,
+   "runs": 5,
+   "dur_min": 106,
+   "avg_pace_s": 242,
+   "fastest_pace_s": 237,
+   "longest_km": 8.06
+  },
+  {
+   "monday": "2024-12-09",
+   "km": 24.42,
+   "runs": 5,
+   "dur_min": 100,
+   "avg_pace_s": 245,
+   "fastest_pace_s": 221,
+   "longest_km": 6.02
+  },
+  {
+   "monday": "2024-12-16",
+   "km": 18.98,
+   "runs": 6,
+   "dur_min": 78,
+   "avg_pace_s": 248,
+   "fastest_pace_s": 237,
+   "longest_km": 6.07
+  },
+  {
+   "monday": "2024-12-23",
+   "km": 16.15,
+   "runs": 4,
+   "dur_min": 66,
+   "avg_pace_s": 245,
+   "fastest_pace_s": 235,
+   "longest_km": 6.02
+  },
+  {
+   "monday": "2024-12-30",
+   "km": 11.29,
+   "runs": 2,
+   "dur_min": 44,
+   "avg_pace_s": 235,
+   "fastest_pace_s": 233,
+   "longest_km": 6.09
+  }
+ ],
+ "months": {
+  "2024-12": [
+   101.2,
+   24
+  ],
+  "2024-11": [
+   135.8,
+   40
+  ],
+  "2024-10": [
+   108.4,
+   20
+  ]
+ },
+ "totals": {
+  "km": 345.4,
+  "runs": 84,
+  "hours": 23.9,
+  "active_days": 62
+ },
+ "highlights": {
+  "fastest": {
+   "date": "2024-11-24",
+   "type": "户外跑",
+   "km": 1.08,
+   "dur_s": 185,
+   "pace_s": 171,
+   "hr": 161,
+   "ts": null
+  },
+  "longest": {
+   "date": "2024-10-20",
+   "type": "户外跑",
+   "km": 21.77,
+   "dur_s": 5693,
+   "pace_s": 262,
+   "hr": 163,
+   "ts": null
+  },
+  "best5k": {
+   "date": "2024-12-12",
+   "type": "户外跑",
+   "km": 5.25,
+   "dur_s": 1158,
+   "pace_s": 221,
+   "hr": 154,
+   "ts": null
+  }
+ }
+}

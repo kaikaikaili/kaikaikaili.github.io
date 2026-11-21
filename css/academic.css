@@ -47,6 +47,12 @@ a:hover { color: var(--accent-dark); text-decoration: underline; text-underline-
 .contact-row { margin-top: 14px; display: flex; justify-content: center; gap: 22px; }
 .contact-row a { color: var(--muted); font-size: 1.15rem; }
 .contact-row a:hover { color: var(--accent); text-decoration: none; }
+.contact-row a.lang-toggle {
+    font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase;
+    border: 1px solid var(--rule, #d8dde3); border-radius: 999px;
+    padding: 3px 12px; align-self: center;
+}
 
 /* ---- section labels ---- */
 .section-label {

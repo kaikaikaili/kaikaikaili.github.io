@@ -1,0 +1,457 @@
+{
+ "generated": "2025-12-31",
+ "year": 2025,
+ "period": "2025-01-01 → 2025-12-31",
+ "weeks": [
+  {
+   "monday": "2024-12-30",
+   "km": 43.4,
+   "runs": 4,
+   "dur_min": 199,
+   "avg_pace_s": 275,
+   "fastest_pace_s": 232,
+   "longest_km": 20.26
+  },
+  {
+   "monday": "2025-01-06",
+   "km": 35.96,
+   "runs": 8,
+   "dur_min": 148,
+   "avg_pace_s": 246,
+   "fastest_pace_s": 191,
+   "longest_km": 15.21
+  },
+  {
+   "monday": "2025-01-13",
+   "km": 41.79,
+   "runs": 10,
+   "dur_min": 179,
+   "avg_pace_s": 258,
+   "fastest_pace_s": 252,
+   "longest_km": 10.23
+  },
+  {
+   "monday": "2025-01-20",
+   "km": 32.29,
+   "runs": 9,
+   "dur_min": 141,
+   "avg_pace_s": 261,
+   "fastest_pace_s": 238,
+   "longest_km": 9.51
+  },
+  {
+   "monday": "2025-01-27",
+   "km": 2.82,
+   "runs": 5,
+   "dur_min": 14,
+   "avg_pace_s": 301,
+   "fastest_pace_s": 253,
+   "longest_km": 1.51
+  },
+  {
+   "monday": "2025-02-03",
+   "km": 25.71,
+   "runs": 7,
+   "dur_min": 114,
+   "avg_pace_s": 267,
+   "fastest_pace_s": 257,
+   "longest_km": 5.85
+  },
+  {
+   "monday": "2025-02-10",
+   "km": 41.57,
+   "runs": 14,
+   "dur_min": 179,
+   "avg_pace_s": 258,
+   "fastest_pace_s": 229,
+   "longest_km": 9.45
+  },
+  {
+   "monday": "2025-02-17",
+   "km": 48.05,
+   "runs": 6,
+   "dur_min": 207,
+   "avg_pace_s": 259,
+   "fastest_pace_s": 240,
+   "longest_km": 13.29
+  },
+  {
+   "monday": "2025-02-24",
+   "km": 28.03,
+   "runs": 5,
+   "dur_min": 119,
+   "avg_pace_s": 254,
+   "fastest_pace_s": 241,
+   "longest_km": 7.05
+  },
+  {
+   "monday": "2025-03-10",
+   "km": 16.62,
+   "runs": 8,
+   "dur_min": 82,
+   "avg_pace_s": 294,
+   "fastest_pace_s": 264,
+   "longest_km": 4.26
+  },
+  {
+   "monday": "2025-03-17",
+   "km": 48.86,
+   "runs": 9,
+   "dur_min": 231,
+   "avg_pace_s": 284,
+   "fastest_pace_s": 265,
+   "longest_km": 21.39
+  },
+  {
+   "monday": "2025-03-24",
+   "km": 31.23,
+   "runs": 7,
+   "dur_min": 142,
+   "avg_pace_s": 273,
+   "fastest_pace_s": 257,
+   "longest_km": 8.86
+  },
+  {
+   "monday": "2025-03-31",
+   "km": 23.56,
+   "runs": 5,
+   "dur_min": 104,
+   "avg_pace_s": 266,
+   "fastest_pace_s": 256,
+   "longest_km": 7.1
+  },
+  {
+   "monday": "2025-04-07",
+   "km": 5.75,
+   "runs": 3,
+   "dur_min": 28,
+   "avg_pace_s": 288,
+   "fastest_pace_s": 274,
+   "longest_km": 3.06
+  },
+  {
+   "monday": "2025-04-14",
+   "km": 17.98,
+   "runs": 5,
+   "dur_min": 79,
+   "avg_pace_s": 263,
+   "fastest_pace_s": 247,
+   "longest_km": 6.17
+  },
+  {
+   "monday": "2025-04-21",
+   "km": 16.88,
+   "runs": 5,
+   "dur_min": 72,
+   "avg_pace_s": 255,
+   "fastest_pace_s": 222,
+   "longest_km": 6.23
+  },
+  {
+   "monday": "2025-04-28",
+   "km": 5.24,
+   "runs": 3,
+   "dur_min": 22,
+   "avg_pace_s": 248,
+   "fastest_pace_s": 228,
+   "longest_km": 2.22
+  },
+  {
+   "monday": "2025-05-05",
+   "km": 14.0,
+   "runs": 5,
+   "dur_min": 60,
+   "avg_pace_s": 258,
+   "fastest_pace_s": 230,
+   "longest_km": 6.61
+  },
+  {
+   "monday": "2025-05-12",
+   "km": 12.76,
+   "runs": 5,
+   "dur_min": 56,
+   "avg_pace_s": 264,
+   "fastest_pace_s": 225,
+   "longest_km": 6.24
+  },
+  {
+   "monday": "2025-06-02",
+   "km": 37.3,
+   "runs": 10,
+   "dur_min": 159,
+   "avg_pace_s": 255,
+   "fastest_pace_s": 224,
+   "longest_km": 9.97
+  },
+  {
+   "monday": "2025-06-09",
+   "km": 11.55,
+   "runs": 7,
+   "dur_min": 47,
+   "avg_pace_s": 243,
+   "fastest_pace_s": 218,
+   "longest_km": 4.0
+  },
+  {
+   "monday": "2025-06-16",
+   "km": 4.4,
+   "runs": 2,
+   "dur_min": 19,
+   "avg_pace_s": 255,
+   "fastest_pace_s": 253,
+   "longest_km": 4.01
+  },
+  {
+   "monday": "2025-06-23",
+   "km": 32.88,
+   "runs": 7,
+   "dur_min": 142,
+   "avg_pace_s": 260,
+   "fastest_pace_s": 251,
+   "longest_km": 10.0
+  },
+  {
+   "monday": "2025-06-30",
+   "km": 19.5,
+   "runs": 5,
+   "dur_min": 89,
+   "avg_pace_s": 275,
+   "fastest_pace_s": 244,
+   "longest_km": 8.01
+  },
+  {
+   "monday": "2025-07-07",
+   "km": 2.73,
+   "runs": 3,
+   "dur_min": 13,
+   "avg_pace_s": 277,
+   "fastest_pace_s": 275,
+   "longest_km": 1.56
+  },
+  {
+   "monday": "2025-07-14",
+   "km": 17.31,
+   "runs": 9,
+   "dur_min": 83,
+   "avg_pace_s": 286,
+   "fastest_pace_s": 199,
+   "longest_km": 3.16
+  },
+  {
+   "monday": "2025-07-21",
+   "km": 21.09,
+   "runs": 7,
+   "dur_min": 95,
+   "avg_pace_s": 271,
+   "fastest_pace_s": 260,
+   "longest_km": 6.01
+  },
+  {
+   "monday": "2025-07-28",
+   "km": 7.01,
+   "runs": 1,
+   "dur_min": 30,
+   "avg_pace_s": 261,
+   "fastest_pace_s": 261,
+   "longest_km": 7.01
+  },
+  {
+   "monday": "2025-09-01",
+   "km": 1.34,
+   "runs": 2,
+   "dur_min": 6,
+   "avg_pace_s": 281,
+   "fastest_pace_s": 279,
+   "longest_km": 1.01
+  },
+  {
+   "monday": "2025-10-13",
+   "km": 21.36,
+   "runs": 1,
+   "dur_min": 114,
+   "avg_pace_s": 320,
+   "fastest_pace_s": 320,
+   "longest_km": 21.36
+  },
+  {
+   "monday": "2025-10-20",
+   "km": 0.44,
+   "runs": 1,
+   "dur_min": 2,
+   "avg_pace_s": 284,
+   "fastest_pace_s": 283,
+   "longest_km": 0.44
+  },
+  {
+   "monday": "2025-10-27",
+   "km": 3.52,
+   "runs": 2,
+   "dur_min": 16,
+   "avg_pace_s": 274,
+   "fastest_pace_s": 266,
+   "longest_km": 2.12
+  },
+  {
+   "monday": "2025-11-03",
+   "km": 8.55,
+   "runs": 3,
+   "dur_min": 39,
+   "avg_pace_s": 273,
+   "fastest_pace_s": 267,
+   "longest_km": 3.31
+  },
+  {
+   "monday": "2025-11-10",
+   "km": 23.09,
+   "runs": 4,
+   "dur_min": 104,
+   "avg_pace_s": 271,
+   "fastest_pace_s": 195,
+   "longest_km": 10.01
+  },
+  {
+   "monday": "2025-11-17",
+   "km": 7.77,
+   "runs": 6,
+   "dur_min": 34,
+   "avg_pace_s": 261,
+   "fastest_pace_s": 194,
+   "longest_km": 4.44
+  },
+  {
+   "monday": "2025-11-24",
+   "km": 26.25,
+   "runs": 3,
+   "dur_min": 120,
+   "avg_pace_s": 273,
+   "fastest_pace_s": 261,
+   "longest_km": 21.42
+  },
+  {
+   "monday": "2025-12-01",
+   "km": 16.69,
+   "runs": 8,
+   "dur_min": 74,
+   "avg_pace_s": 267,
+   "fastest_pace_s": 243,
+   "longest_km": 4.0
+  },
+  {
+   "monday": "2025-12-08",
+   "km": 24.2,
+   "runs": 5,
+   "dur_min": 107,
+   "avg_pace_s": 265,
+   "fastest_pace_s": 202,
+   "longest_km": 8.06
+  },
+  {
+   "monday": "2025-12-15",
+   "km": 2.4,
+   "runs": 1,
+   "dur_min": 11,
+   "avg_pace_s": 270,
+   "fastest_pace_s": 271,
+   "longest_km": 2.4
+  },
+  {
+   "monday": "2025-12-22",
+   "km": 28.2,
+   "runs": 5,
+   "dur_min": 123,
+   "avg_pace_s": 261,
+   "fastest_pace_s": 245,
+   "longest_km": 15.01
+  },
+  {
+   "monday": "2025-12-29",
+   "km": 15.94,
+   "runs": 3,
+   "dur_min": 72,
+   "avg_pace_s": 271,
+   "fastest_pace_s": 252,
+   "longest_km": 7.01
+  }
+ ],
+ "months": {
+  "2025-12": [
+   87.4,
+   22
+  ],
+  "2025-11": [
+   67.1,
+   17
+  ],
+  "2025-10": [
+   23.9,
+   3
+  ],
+  "2025-09": [
+   1.3,
+   2
+  ],
+  "2025-07": [
+   67.6,
+   25
+  ],
+  "2025-06": [
+   86.1,
+   26
+  ],
+  "2025-05": [
+   29.8,
+   12
+  ],
+  "2025-04": [
+   64.1,
+   18
+  ],
+  "2025-03": [
+   99.0,
+   25
+  ],
+  "2025-02": [
+   143.4,
+   32
+  ],
+  "2025-01": [
+   156.3,
+   36
+  ]
+ },
+ "totals": {
+  "km": 826.0,
+  "runs": 218,
+  "hours": 61.2,
+  "active_days": 147
+ },
+ "highlights": {
+  "fastest": {
+   "date": "2025-01-08",
+   "type": "赛道跑",
+   "km": 1.18,
+   "dur_s": 225,
+   "pace_s": 191,
+   "hr": 156,
+   "ts": null
+  },
+  "longest": {
+   "date": "2025-11-30",
+   "type": "户外跑",
+   "km": 21.42,
+   "dur_s": 5858,
+   "pace_s": 274,
+   "hr": 161,
+   "ts": null
+  },
+  "best5k": {
+   "date": "2025-02-15",
+   "type": "户外跑",
+   "km": 9.45,
+   "dur_s": 2184,
+   "pace_s": 231,
+   "hr": 146,
+   "ts": null
+  }
+ }
+}
