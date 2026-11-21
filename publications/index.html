@@ -3,66 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUTPUTS - 李凯</title>
+    <title>学术成果 - 李凯</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --neon-blue: #00f2ff; --bg-dark: #050a0f; --text-gray: #a0aec0; }
-        body {
-            background-color: var(--bg-dark); color: #fff; font-family: monospace;
-            background-image: linear-gradient(rgba(0,242,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,242,255,0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .back-home { text-decoration: none; color: var(--neon-blue); font-size: 0.9rem; margin-bottom: 30px; display: block; }
-        
-        .pub-item { 
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(0,242,255,0.1); 
-            padding: 20px; margin-bottom: 20px; position: relative;
-        }
-        .pub-item:hover { border-color: var(--neon-blue); background: rgba(0,242,255,0.05); }
-        
-        .status-tag { 
-            font-size: 0.7rem; padding: 2px 8px; border: 1px solid var(--neon-blue); 
-            color: var(--neon-blue); position: absolute; top: 10px; right: 10px;
-        }
-        .pub-title { font-weight: bold; color: #fff; margin: 10px 0; display: block; }
-        .pub-authors { font-size: 0.9rem; color: var(--text-gray); }
-        .pub-venue { font-style: italic; color: var(--neon-blue); font-size: 0.9rem; }
-        
-        .link-group { margin-top: 15px; }
-        .link-group a { color: var(--text-gray); text-decoration: none; margin-right: 15px; font-size: 0.8rem; }
-        .link-group a:hover { color: var(--neon-blue); }
-    </style>
+    <link rel="stylesheet" href="../css/academic.css">
 </head>
 <body>
     <div class="container">
-        <a href="../" class="back-home"><i class="fas fa-terminal"></i> ESC_BACK_TO_TERMINAL</a>
-        <h2 style="color:var(--neon-blue); margin-bottom:30px; letter-spacing:3px;">RESEARCH_ARCHIVE</h2>
+        <a href="../" class="back-home"><i class="fas fa-arrow-left"></i> 返回首页</a>
+        <h1 class="page-title">学术成果</h1>
+        <p class="page-sub">Publications &amp; Conference Presentations</p>
 
-        <!-- 示例项目 1 -->
-        <div class="pub-item">
-            <span class="status-tag">IN_PREP</span>
+        <div class="section-label">Journal (In Preparation)</div>
+
+        <div class="card">
+            <span class="status">In Preparation</span>
             <span class="pub-title">Deep Learning Retrieval of Vertical Velocity from Spaceborne Dual-Frequency Radar in Typhoons</span>
-            <p class="pub-authors"><b>Li, K.</b>, and Co-authors</p>
+            <p class="pub-authors"><strong>Li, K.</strong>, and Co-authors</p>
             <p class="pub-venue">Journal of Atmospheric and Oceanic Technology</p>
-            <div class="link-group">
-                <a href="#"><i class="fas fa-file-pdf"></i> PDF_PREPRINT</a>
-                <a href="#"><i class="fab fa-github"></i> CODE_SOURCE</a>
+            <div class="pub-links">
+                <a href="#"><i class="fas fa-file-pdf"></i> PDF (Preprint)</a>
+                <a href="#"><i class="fab fa-github"></i> Code</a>
             </div>
         </div>
 
-        <!-- 示例项目 2 -->
-        <div class="pub-item">
-            <span class="status-tag">PRESENTED</span>
+        <div class="section-label">Conference</div>
+
+        <div class="card">
+            <span class="status">Presented</span>
             <span class="pub-title">Improving Radar Reflectivity Correction via Machine Learning</span>
-            <p class="pub-authors"><b>Li, K.</b>, et al.</p>
+            <p class="pub-authors"><strong>Li, K.</strong>, et al.</p>
             <p class="pub-venue">2024 Chinese Meteorological Society Annual Meeting</p>
-            <div class="link-group">
-                <a href="#"><i class="fas fa-desktop"></i> SLIDES</a>
+            <div class="pub-links">
+                <a href="#"><i class="fas fa-desktop"></i> Slides</a>
             </div>
         </div>
-        
-        <p style="text-align:center; color:var(--text-gray); font-size:0.8rem; margin-top:50px;">-- END OF RECORDS --</p>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 李凯 · 南京大学大气科学学院</p>
+        </footer>
     </div>
 </body>
 </html>
