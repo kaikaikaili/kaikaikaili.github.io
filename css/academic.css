@@ -204,3 +204,36 @@ a.pub-title:hover { color: var(--accent-dark); }
     .log-item { flex-direction: column; gap: 6px; }
     .container { padding: 32px 18px 56px; }
 }
+
+/* ---- dark mode (follows system) ---- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ink: #d6dce3;
+        --muted: #97a3ae;
+        --accent: #6ea3d8;
+        --accent-dark: #9cc0e6;
+        --accent-soft: #1b2a3a;
+        --line: #2b3440;
+        --bg: #14191f;
+        --card: #1c232b;
+    }
+    ::selection { background: #24425f; color: #dbe7f2; }
+    body {
+        background:
+            radial-gradient(ellipse 80% 50% at 50% -10%, rgba(110, 163, 216, .06), transparent),
+            var(--bg);
+    }
+    .avatar { border-color: var(--card); box-shadow: 0 2px 14px rgba(0, 0, 0, .45); }
+    a.card:hover { border-color: #3a5a7d; box-shadow: 0 4px 14px rgba(0, 0, 0, .35); }
+    .chip { border-color: #2e4a66; }
+    .mission { background: linear-gradient(180deg, var(--accent-soft), var(--card)); border-color: #2e4a66; }
+    .fact:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .3); }
+    .card.radar { border-color: #2e4a66; }
+    .card.tool { background: var(--card); border-color: var(--line); }
+    .card.tool:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+    .empty-state { border-color: #38434f; background: rgba(28, 35, 43, .6); }
+    .timeline-item { border-left-color: #2e3a46; }
+    .skill .bar { background: #262e37; }
+    a.log-item:hover { background: var(--card); }
+    .status { border-color: #2e4a66; }
+}
