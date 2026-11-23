@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21",
+ "generated": "2026-11-23",
  "year": 2026,
  "weeks": [
   {
@@ -337,18 +337,18 @@
   },
   {
    "monday": "2026-11-16",
-   "km": 31.1,
-   "runs": 9,
-   "dur_min": 145,
-   "avg_pace_s": 279,
+   "km": 54.3,
+   "runs": 11,
+   "dur_min": 258,
+   "avg_pace_s": 285,
    "fastest_pace_s": 190,
-   "longest_km": 12.0
+   "longest_km": 20.01
   }
  ],
  "months": {
   "2026-11": [
-   84.5,
-   25
+   107.7,
+   27
   ],
   "2026-10": [
    165.8,
@@ -388,10 +388,10 @@
   ]
  },
  "totals": {
-  "km": 859.0,
-  "runs": 177,
-  "hours": 68.3,
-  "active_days": 129
+  "km": 882.2,
+  "runs": 179,
+  "hours": 70.2,
+  "active_days": 130
  },
  "highlights": {
   "fastest": {

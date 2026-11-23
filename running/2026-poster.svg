@@ -10,91 +10,63 @@
 </defs>
 <rect width="1200" height="1697" fill="#0f1420"/>
 <rect width="1200" height="1697" fill="url(#heroG)" opacity="0.5"/>
-<line x1="0" y1="140" x2="1200" y2="140" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="196" x2="1200" y2="196" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="252" x2="1200" y2="252" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="308" x2="1200" y2="308" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="364" x2="1200" y2="364" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="476" x2="1200" y2="476" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="532" x2="1200" y2="532" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="588" x2="1200" y2="588" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="644" x2="1200" y2="644" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="700" x2="1200" y2="700" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="756" x2="1200" y2="756" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="812" x2="1200" y2="812" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="868" x2="1200" y2="868" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="924" x2="1200" y2="924" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="980" x2="1200" y2="980" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1036" x2="1200" y2="1036" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1092" x2="1200" y2="1092" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1148" x2="1200" y2="1148" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1204" x2="1200" y2="1204" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1260" x2="1200" y2="1260" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1316" x2="1200" y2="1316" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1372" x2="1200" y2="1372" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1428" x2="1200" y2="1428" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1484" x2="1200" y2="1484" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1540" x2="1200" y2="1540" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1596" x2="1200" y2="1596" stroke="#ffffff" stroke-opacity="0.015"/>
-<line x1="0" y1="1652" x2="1200" y2="1652" stroke="#ffffff" stroke-opacity="0.015"/>
-<text x="80" y="108" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="15" fill="#3d9bff" font-weight="700" letter-spacing="4" text-anchor="start" opacity="1">RUNNING · YEAR IN REVIEW</text>
-<text x="1120" y="108" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="15" fill="#22c39a" font-weight="700" letter-spacing="4" text-anchor="end" opacity="1">2026</text>
-<text x="80" y="172" font-family="'Work Sans','PingFang SC',sans-serif" font-size="52" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">我的一年跑步</text>
-<text x="80" y="212" font-family="'Work Sans','PingFang SC',sans-serif" font-size="15" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">南京大学 · COROS PACE 3 · 2026-01-01 → 2026-11-21</text>
-<text x="80" y="308" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="120" fill="#3d9bff" font-weight="700" letter-spacing="-2" text-anchor="start" opacity="1">859</text>
-<text x="380" y="294" font-family="'Work Sans','PingFang SC',sans-serif" font-size="30" fill="#b8c0d0" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">km</text>
-<text x="380" y="322" font-family="'Work Sans','PingFang SC',sans-serif" font-size="16" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">总里程</text>
-<text x="80" y="366" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">177</text>
-<text x="80" y="388" font-family="'Work Sans','PingFang SC',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">训练次数</text>
-<text x="288" y="366" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">68.3</text>
-<text x="288" y="388" font-family="'Work Sans','PingFang SC',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">运动时长 · h</text>
-<text x="496" y="366" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">129</text>
-<text x="496" y="388" font-family="'Work Sans','PingFang SC',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">跑步日</text>
-<text x="704" y="366" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">38</text>
-<text x="704" y="388" font-family="'Work Sans','PingFang SC',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">训练周</text>
-<text x="912" y="366" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">63.1</text>
-<text x="912" y="388" font-family="'Work Sans','PingFang SC',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">最大周跑量 · km</text>
-<text x="80" y="458" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start" opacity="1">月度跑量</text>
-<rect x="80" y="590.2509047044632" width="62" height="51.74909529553679" rx="4" fill="url(#barG)"/>
-<text x="111.0" y="580.2509047044632" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">57</text>
-<text x="111.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">1月</text>
-<rect x="168" y="639" width="62" height="3" rx="1.5" fill="#2a3247"/>
-<text x="199.0" y="630" font-family="'Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">休</text>
-<text x="199.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">2月</text>
-<rect x="256" y="627.0723763570567" width="62" height="14.927623642943304" rx="4" fill="url(#barG)"/>
-<text x="287.0" y="617.0723763570567" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">16</text>
-<text x="287.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">3月</text>
-<rect x="344" y="574.5090470446321" width="62" height="67.4909529553679" rx="4" fill="url(#barG)"/>
-<text x="375.0" y="564.5090470446321" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">75</text>
-<text x="375.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">4月</text>
-<rect x="432" y="571.0711700844391" width="62" height="70.92882991556091" rx="4" fill="url(#barG)"/>
-<text x="463.0" y="561.0711700844391" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">78</text>
-<text x="463.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">5月</text>
-<rect x="520" y="508.3751507840772" width="62" height="133.62484921592278" rx="4" fill="url(#barG)"/>
-<text x="551.0" y="498.3751507840772" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">148</text>
-<text x="551.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">6月</text>
-<rect x="608" y="593.2364294330519" width="62" height="48.763570566948125" rx="4" fill="url(#barG)"/>
-<text x="639.0" y="583.2364294330519" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">54</text>
-<text x="639.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">7月</text>
-<rect x="696" y="577.2231604342581" width="62" height="64.77683956574184" rx="4" fill="url(#barG)"/>
-<text x="727.0" y="567.2231604342581" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">72</text>
-<text x="727.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">8月</text>
-<rect x="784" y="543.5681544028951" width="62" height="98.43184559710494" rx="4" fill="url(#barG)"/>
-<text x="815.0" y="533.5681544028951" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">109</text>
-<text x="815.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">9月</text>
-<rect x="872" y="492.0" width="62" height="150.0" rx="4" fill="url(#barG)"/>
-<text x="903.0" y="482.0" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">166</text>
-<text x="903.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">10月</text>
-<rect x="960" y="565.552472858866" width="62" height="76.4475271411339" rx="4" fill="url(#barG)"/>
-<text x="991.0" y="555.552472858866" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle" opacity="1">84</text>
-<text x="991.0" y="662" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle" opacity="1">11月</text>
-<line x1="80" y1="642" x2="1120" y2="642" stroke="#2a3247" stroke-width="1"/>
-<text x="80" y="706" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start" opacity="1">跑步日历</text>
-<text x="1120" y="706" font-family="'Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end" opacity="1">颜色越亮 · 跑得越多</text>
-<text x="62" y="754.25" font-family="'Work Sans',sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end" opacity="1">一</text>
-<text x="62" y="792.25" font-family="'Work Sans',sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end" opacity="1">三</text>
-<text x="62" y="830.25" font-family="'Work Sans',sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end" opacity="1">五</text>
+<text x="80" y="108" font-family="Instrument Sans,Work Sans,sans-serif" font-size="15" fill="#3d9bff" font-weight="700" letter-spacing="4" text-anchor="start">RUNNING · YEAR IN REVIEW</text>
+<text x="1120" y="108" font-family="Instrument Sans,Work Sans,sans-serif" font-size="15" fill="#22c39a" font-weight="700" letter-spacing="4" text-anchor="end">2026</text>
+<text x="80" y="172" font-family="Work Sans,PingFang SC,sans-serif" font-size="52" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">我的一年跑步</text>
+<text x="80" y="212" font-family="Work Sans,PingFang SC,sans-serif" font-size="15" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">南京大学 · COROS PACE 3 · 2026-01-01 → 2026-11-22</text>
+<text x="80" y="308" font-family="Instrument Sans,Work Sans,sans-serif" font-size="120" fill="#3d9bff" font-weight="700" letter-spacing="-2" text-anchor="start">882.2</text>
+<text x="380" y="294" font-family="Instrument Sans,Work Sans,sans-serif" font-size="30" fill="#b8c0d0" font-weight="400" letter-spacing="0" text-anchor="start">km</text>
+<text x="380" y="322" font-family="Instrument Sans,Work Sans,sans-serif" font-size="16" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">总里程</text>
+<text x="80" y="366" font-family="Instrument Sans,Work Sans,sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">179</text>
+<text x="80" y="388" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">训练次数</text>
+<text x="288" y="366" font-family="Instrument Sans,Work Sans,sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">70.1</text>
+<text x="288" y="388" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">运动时长 · h</text>
+<text x="496" y="366" font-family="Instrument Sans,Work Sans,sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">130</text>
+<text x="496" y="388" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">跑步日</text>
+<text x="704" y="366" font-family="Instrument Sans,Work Sans,sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">38</text>
+<text x="704" y="388" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">训练周</text>
+<text x="912" y="366" font-family="Instrument Sans,Work Sans,sans-serif" font-size="26" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start">63.1</text>
+<text x="912" y="388" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">最大周跑量 · km</text>
+<text x="80" y="458" font-family="Instrument Sans,Work Sans,sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start">月度跑量</text>
+<rect x="80" y="590" width="62" height="52" rx="4" fill="url(#barG)"/>
+<text x="111.0" y="580.2481003497769" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">57</text>
+<text x="111.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">1月</text>
+<rect x="177" y="639" width="62" height="3" rx="1.5" fill="#2a3247"/>
+<text x="208.0" y="630" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">休</text>
+<text x="208.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">2月</text>
+<rect x="274" y="627" width="62" height="15" rx="4" fill="url(#barG)"/>
+<text x="305.0" y="617.0832227716801" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">16</text>
+<text x="305.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">3月</text>
+<rect x="371" y="574" width="62" height="68" rx="4" fill="url(#barG)"/>
+<text x="402.0" y="564.4810034977687" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">75</text>
+<text x="402.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">4月</text>
+<rect x="468" y="571" width="62" height="71" rx="4" fill="url(#barG)"/>
+<text x="499.0" y="561.0344952357979" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">78</text>
+<text x="499.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">5月</text>
+<rect x="565" y="508" width="62" height="134" rx="4" fill="url(#barG)"/>
+<text x="596.0" y="498.4184054999397" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">148</text>
+<text x="596.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">6月</text>
+<rect x="662" y="593" width="62" height="49" rx="4" fill="url(#barG)"/>
+<text x="693.0" y="583.2332649861296" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">54</text>
+<text x="693.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">7月</text>
+<rect x="759" y="577" width="62" height="65" rx="4" fill="url(#barG)"/>
+<text x="790.0" y="567.221927391147" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">72</text>
+<text x="790.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">8月</text>
+<rect x="856" y="544" width="62" height="98" rx="4" fill="url(#barG)"/>
+<text x="887.0" y="533.6071643951273" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">109</text>
+<text x="887.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">9月</text>
+<rect x="953" y="492" width="62" height="150" rx="4" fill="url(#barG)"/>
+<text x="984.0" y="482.0" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">166</text>
+<text x="984.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">10月</text>
+<rect x="1050" y="545" width="62" height="97" rx="4" fill="url(#barG)"/>
+<text x="1081.0" y="534.6022192739115" font-family="Instrument Sans,Work Sans,sans-serif" font-size="13" fill="#b8c0d0" font-weight="600" letter-spacing="0" text-anchor="middle">108</text>
+<text x="1081.0" y="662" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="middle">11月</text>
+<line x1="80" y1="642" x2="1120" y2="642" stroke="#2a3247"/>
+<text x="80" y="706" font-family="Instrument Sans,Work Sans,sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start">跑步日历</text>
+<text x="1120" y="706" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">颜色越亮 · 跑得越多</text>
+<text x="62" y="754.25" font-family="Work Sans,PingFang SC,sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">一</text>
+<text x="62" y="792.25" font-family="Work Sans,PingFang SC,sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">三</text>
+<text x="62" y="830.25" font-family="Work Sans,PingFang SC,sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">五</text>
 <rect x="80" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="80" y="743" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="80" y="762" width="15" height="15" rx="3" fill="#1e2536"/>
@@ -102,6 +74,7 @@
 <rect x="80" y="800" width="15" height="15" rx="3" fill="#8fc7ff"/>
 <rect x="80" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="80" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="99" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">1月</text>
 <rect x="99" y="724" width="15" height="15" rx="3" fill="#1b3a5c"/>
 <rect x="99" y="743" width="15" height="15" rx="3" fill="#1b3a5c"/>
 <rect x="99" y="762" width="15" height="15" rx="3" fill="#1e2536"/>
@@ -130,6 +103,7 @@
 <rect x="156" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="156" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="156" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="175" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">2月</text>
 <rect x="175" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="175" y="743" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="175" y="762" width="15" height="15" rx="3" fill="#1e2536"/>
@@ -158,6 +132,7 @@
 <rect x="232" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="232" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="232" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="251" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">3月</text>
 <rect x="251" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="251" y="743" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="251" y="762" width="15" height="15" rx="3" fill="#1e2536"/>
@@ -193,6 +168,7 @@
 <rect x="327" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="327" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="327" y="838" width="15" height="15" rx="3" fill="#1b3a5c"/>
+<text x="346" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">4月</text>
 <rect x="346" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="346" y="743" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="346" y="762" width="15" height="15" rx="3" fill="#24568c"/>
@@ -221,6 +197,7 @@
 <rect x="403" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="403" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="403" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="422" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">5月</text>
 <rect x="422" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="422" y="743" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="422" y="762" width="15" height="15" rx="3" fill="#24568c"/>
@@ -249,6 +226,7 @@
 <rect x="479" y="800" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="479" y="819" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="479" y="838" width="15" height="15" rx="3" fill="#24568c"/>
+<text x="498" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">6月</text>
 <rect x="498" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="498" y="743" width="15" height="15" rx="3" fill="#8fc7ff"/>
 <rect x="498" y="762" width="15" height="15" rx="3" fill="#8fc7ff"/>
@@ -284,6 +262,7 @@
 <rect x="574" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="574" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="574" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="593" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">7月</text>
 <rect x="593" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="593" y="743" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="593" y="762" width="15" height="15" rx="3" fill="#24568c"/>
@@ -312,6 +291,7 @@
 <rect x="650" y="800" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="650" y="819" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="650" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="669" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">8月</text>
 <rect x="669" y="724" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="669" y="743" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="669" y="762" width="15" height="15" rx="3" fill="#24568c"/>
@@ -347,6 +327,7 @@
 <rect x="745" y="800" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="745" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="745" y="838" width="15" height="15" rx="3" fill="#24568c"/>
+<text x="764" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">9月</text>
 <rect x="764" y="724" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="764" y="743" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="764" y="762" width="15" height="15" rx="3" fill="#3d9bff"/>
@@ -375,6 +356,7 @@
 <rect x="821" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="821" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="821" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="840" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">10月</text>
 <rect x="840" y="724" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="840" y="743" width="15" height="15" rx="3" fill="#8fc7ff"/>
 <rect x="840" y="762" width="15" height="15" rx="3" fill="#1e2536"/>
@@ -403,6 +385,7 @@
 <rect x="897" y="800" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="897" y="819" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="897" y="838" width="15" height="15" rx="3" fill="#1e2536"/>
+<text x="916" y="716" font-family="Instrument Sans,Work Sans,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">11月</text>
 <rect x="916" y="724" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="916" y="743" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="916" y="762" width="15" height="15" rx="3" fill="#24568c"/>
@@ -422,64 +405,41 @@
 <rect x="954" y="762" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="954" y="781" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="954" y="800" width="15" height="15" rx="3" fill="#1b3a5c"/>
-<rect x="954" y="819" width="15" height="15" rx="3" fill="#24568c" stroke="#3d9bff" stroke-opacity="0.5" stroke-width="1"/>
-<text x="99" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">1月</text>
-<text x="175" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">2月</text>
-<text x="251" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">3月</text>
-<text x="346" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">4月</text>
-<text x="422" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">5月</text>
-<text x="498" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">6月</text>
-<text x="593" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">7月</text>
-<text x="669" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">8月</text>
-<text x="764" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">9月</text>
-<text x="840" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">10月</text>
-<text x="916" y="716" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">11月</text>
-<text x="999" y="892" font-family="'Work Sans',sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end" opacity="1">少</text>
+<rect x="954" y="819" width="15" height="15" rx="3" fill="#3d9bff"/>
+<rect x="954" y="838" width="15" height="15" rx="3" fill="#8fc7ff" stroke="#3d9bff" stroke-opacity="0.5"/>
+<text x="999" y="892" font-family="Work Sans,PingFang SC,sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">少</text>
 <rect x="1025" y="879" width="15" height="15" rx="3" fill="#1e2536"/>
 <rect x="1044" y="879" width="15" height="15" rx="3" fill="#1b3a5c"/>
 <rect x="1063" y="879" width="15" height="15" rx="3" fill="#24568c"/>
 <rect x="1082" y="879" width="15" height="15" rx="3" fill="#3d9bff"/>
 <rect x="1101" y="879" width="15" height="15" rx="3" fill="#8fc7ff"/>
-<text x="1134" y="892" font-family="'Work Sans',sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">多</text>
-<text x="80" y="945" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start" opacity="1">年度亮点</text>
-<rect x="80" y="953" width="242.0" height="112" rx="10" fill="#171d2c" stroke="#2a3247" stroke-width="1"/>
-<text x="100" y="989" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">20.26 km</text>
-<text x="100" y="1019" font-family="'Work Sans','PingFang SC',sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start" opacity="1">最长单次</text>
-<text x="100" y="1043" font-family="'Work Sans','PingFang SC',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">1 月 2 日 · 年度开局长距离</text>
-<rect x="346.0" y="953" width="242.0" height="112" rx="10" fill="#171d2c" stroke="#2a3247" stroke-width="1"/>
-<text x="366.0" y="989" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">3:42 /km</text>
-<text x="366.0" y="1019" font-family="'Work Sans','PingFang SC',sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start" opacity="1">最佳 5km 配速</text>
-<text x="366.0" y="1043" font-family="'Work Sans','PingFang SC',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">11 月 8 日 · 5.16 km</text>
-<rect x="612.0" y="953" width="242.0" height="112" rx="10" fill="#171d2c" stroke="#2a3247" stroke-width="1"/>
-<text x="632.0" y="989" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">63.1 km</text>
-<text x="632.0" y="1019" font-family="'Work Sans','PingFang SC',sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start" opacity="1">最大周跑量</text>
-<text x="632.0" y="1043" font-family="'Work Sans','PingFang SC',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">10 月 5 日当周 · 7 次训练</text>
-<rect x="878.0" y="953" width="242.0" height="112" rx="10" fill="#171d2c" stroke="#2a3247" stroke-width="1"/>
-<text x="898.0" y="989" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">8 天</text>
-<text x="898.0" y="1019" font-family="'Work Sans','PingFang SC',sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start" opacity="1">最长连续跑步</text>
-<text x="898.0" y="1043" font-family="'Work Sans','PingFang SC',sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start" opacity="1">全年 129 个跑步日</text>
-<text x="80" y="1115" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start" opacity="1">场地分布</text>
-<rect x="80" y="1141" width="373.74621653084984" height="18" rx="4" fill="#3d9bff"/>
-<rect x="459.74621653084984" y="1141" width="660.2537834691502" height="18" rx="4" fill="#22c39a"/>
-<text x="80" y="1181" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#3d9bff" font-weight="600" letter-spacing="0" text-anchor="start" opacity="1">赛道跑 308.7 km · 81 次</text>
-<text x="1120" y="1181" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#22c39a" font-weight="600" letter-spacing="0" text-anchor="end" opacity="1">户外跑 550.3 km · 96 次</text>
-<text x="80" y="1233" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start" opacity="1">竞技水平</text>
-<text x="80" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">VO₂max</text>
-<text x="80" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">64</text>
-<text x="230.85714285714286" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">Running Level</text>
-<text x="230.85714285714286" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">94 · 前 6%</text>
-<text x="381.7142857142857" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">阈值配速</text>
-<text x="381.7142857142857" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">3:47 /km</text>
-<text x="532.5714285714286" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">5 km</text>
-<text x="532.5714285714286" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">17:58</text>
-<text x="683.4285714285714" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">10 km</text>
-<text x="683.4285714285714" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">37:03</text>
-<text x="834.2857142857143" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">半马</text>
-<text x="834.2857142857143" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">1:21:36</text>
-<text x="985.1428571428572" y="1269" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="11" fill="#7a8398" font-weight="600" letter-spacing="1" text-anchor="start" opacity="1">全马</text>
-<text x="985.1428571428572" y="1299" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="21" fill="#e8ecf4" font-weight="700" letter-spacing="0" text-anchor="start" opacity="1">2:48:54</text>
-<line x1="80" y1="1599" x2="1120" y2="1599" stroke="#2a3247" stroke-width="1"/>
-<text x="80" y="1633" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="1" text-anchor="start" opacity="1">COROS · Year in Sport 2026 · generated 2026-11-21</text>
-<text x="80" y="1655" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="1" text-anchor="start" opacity="1">数据已脱敏 · lkk31.xyz/running</text>
-<text x="1120" y="1655" font-family="'Instrument Sans','Work Sans',sans-serif" font-size="14" fill="#b8c0d0" font-weight="700" letter-spacing="4" text-anchor="end" opacity="1">LKK</text>
+<text x="1134" y="892" font-family="Work Sans,PingFang SC,sans-serif" font-size="10" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="end">多</text>
+<text x="80" y="945" font-family="Instrument Sans,Work Sans,sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start">年度亮点</text>
+<rect x="80" y="953" width="242" height="112" rx="10" fill="#171d2c" stroke="#2a3247"/>
+<text x="100" y="989" font-family="Instrument Sans,Work Sans,sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start">20.26 km</text>
+<text x="100" y="1019" font-family="Work Sans,PingFang SC,sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start">最长单次</text>
+<text x="100" y="1043" font-family="Work Sans,PingFang SC,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">01-02 · 年度最长距离</text>
+<rect x="346" y="953" width="242" height="112" rx="10" fill="#171d2c" stroke="#2a3247"/>
+<text x="366.0" y="989" font-family="Instrument Sans,Work Sans,sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start">3:42 /km</text>
+<text x="366.0" y="1019" font-family="Work Sans,PingFang SC,sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start">最佳 5km 配速</text>
+<text x="366.0" y="1043" font-family="Work Sans,PingFang SC,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">11 月 08 · 5.16 km</text>
+<rect x="612" y="953" width="242" height="112" rx="10" fill="#171d2c" stroke="#2a3247"/>
+<text x="632.0" y="989" font-family="Instrument Sans,Work Sans,sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start">63.1 km</text>
+<text x="632.0" y="1019" font-family="Work Sans,PingFang SC,sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start">最大周跑量</text>
+<text x="632.0" y="1043" font-family="Work Sans,PingFang SC,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">10-05 当周</text>
+<rect x="878" y="953" width="242" height="112" rx="10" fill="#171d2c" stroke="#2a3247"/>
+<text x="898.0" y="989" font-family="Instrument Sans,Work Sans,sans-serif" font-size="24" fill="#3d9bff" font-weight="700" letter-spacing="0" text-anchor="start">8 天</text>
+<text x="898.0" y="1019" font-family="Work Sans,PingFang SC,sans-serif" font-size="13" fill="#e8ecf4" font-weight="600" letter-spacing="0" text-anchor="start">最长连续跑步</text>
+<text x="898.0" y="1043" font-family="Work Sans,PingFang SC,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">全年 130 个跑步日</text>
+<text x="80" y="1115" font-family="Instrument Sans,Work Sans,sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start">场地分布</text>
+<rect x="80" y="1141" width="649" height="18" rx="4" fill="#3d9bff"/>
+<text x="80" y="1181" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#3d9bff" font-weight="600" letter-spacing="0" text-anchor="start">户外跑 550.3 km · 96 次</text>
+<rect x="735" y="1141" width="391" height="18" rx="4" fill="#22c39a"/>
+<text x="734.7327136703691" y="1181" font-family="Work Sans,PingFang SC,sans-serif" font-size="12" fill="#22c39a" font-weight="600" letter-spacing="0" text-anchor="start">赛道跑 331.9 km · 83 次</text>
+<text x="80" y="1233" font-family="Instrument Sans,Work Sans,sans-serif" font-size="17" fill="#e8ecf4" font-weight="700" letter-spacing="1" text-anchor="start">竞技水平</text>
+<text x="1120" y="1229" font-family="Work Sans,PingFang SC,sans-serif" font-size="11" fill="#7a8398" font-weight="400" letter-spacing="0" text-anchor="start">见 lkk31.xyz/running</text>
+<line x1="80" y1="1599" x2="1120" y2="1599" stroke="#2a3247"/>
+<text x="80" y="1633" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="1" text-anchor="start">COROS · Year in Sport 2026 · generated 2026-11-23</text>
+<text x="80" y="1655" font-family="Instrument Sans,Work Sans,sans-serif" font-size="12" fill="#7a8398" font-weight="400" letter-spacing="1" text-anchor="start">数据已脱敏 · lkk31.xyz/running</text>
+<text x="1120" y="1655" font-family="Instrument Sans,Work Sans,sans-serif" font-size="14" fill="#b8c0d0" font-weight="700" letter-spacing="4" text-anchor="end">LKK</text>
 </svg>
