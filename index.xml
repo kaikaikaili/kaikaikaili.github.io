@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>李凯 Likai</title>
-    <link>https://lkk31.xyz/</link>
-    <description>雷达气象 × 深度学习 · 跑步与数据 — lkk31.xyz 最新文章</description>
-    <generator>lkk31.xyz</generator>
+    <link>https://lkk31.cn/</link>
+    <description>雷达气象 × 深度学习 · 跑步与数据 — lkk31.cn 最新文章</description>
+    <generator>lkk31.cn</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0800</lastBuildDate>
-    <atom:link href="https://lkk31.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lkk31.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COROS 训练周报 · 第 47 周（睡眠 · 恢复 · 训练 · 下周建议）</title>
-      <link>https://lkk31.xyz/blog/posts/weekly-review-2026-11-21/</link>
+      <link>https://lkk31.cn/blog/posts/weekly-review-2026-11-21/</link>
       <pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-      <guid>https://lkk31.xyz/blog/posts/weekly-review-2026-11-21/</guid>
+      <guid>https://lkk31.cn/blog/posts/weekly-review-2026-11-21/</guid>
       <description>基于 COROS PACE 3 自动采集的 7 天数据：睡眠评分、HRV、RHR、训练负荷比与 9 次训练配速全景。附下周可落地的 3 条调整建议。</description>
     </item>
     <item>
       <title>深度学习驱动的星载雷达反演：从理论到实现</title>
-      <link>https://lkk31.xyz/blog/posts/radar-deep-learning.html</link>
+      <link>https://lkk31.cn/blog/posts/radar-deep-learning.html</link>
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0800</pubDate>
-      <guid>https://lkk31.xyz/blog/posts/radar-deep-learning.html</guid>
+      <guid>https://lkk31.cn/blog/posts/radar-deep-learning.html</guid>
       <description>探讨如何利用 U-Net 架构处理 GPM-DPR 双频数据，解决台风环境下垂直速度观测的缺失问题。</description>
     </item>
     <item>
       <title>大气科学与马拉松：耐力的双重修行</title>
-      <link>https://lkk31.xyz/blog/posts/marathon-running.html</link>
+      <link>https://lkk31.cn/blog/posts/marathon-running.html</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0800</pubDate>
-      <guid>https://lkk31.xyz/blog/posts/marathon-running.html</guid>
+      <guid>https://lkk31.cn/blog/posts/marathon-running.html</guid>
       <description>在南大校园的 1000 公里跑量中，我发现科研与长跑在本质上有着惊人的相似性。</description>
     </item>
   </channel>
